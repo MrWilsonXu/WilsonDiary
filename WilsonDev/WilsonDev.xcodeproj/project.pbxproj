@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C857486D1FE9390E00E31F7B /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C857486C1FE9390E00E31F7B /* GestureVC.m */; };
 		C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */; };
 		C8B12DB91FD6459D0000DEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DB71FD6459D0000DEB0 /* Main.storyboard */; };
 		C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C857486B1FE9390E00E31F7B /* GestureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureVC.h; sourceTree = "<group>"; };
+		C857486C1FE9390E00E31F7B /* GestureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureVC.m; sourceTree = "<group>"; };
 		C8B12DAE1FD6459D0000DEB0 /* WilsonDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilsonDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B12DB11FD6459D0000DEB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8B12DE31FD6461F0000DEB0 /* WilsonListTableVC.h */,
 				C8B12DE41FD6461F0000DEB0 /* WilsonListTableVC.m */,
+				C857486B1FE9390E00E31F7B /* GestureVC.h */,
+				C857486C1FE9390E00E31F7B /* GestureVC.m */,
 				C8B12DB71FD6459D0000DEB0 /* Main.storyboard */,
 				C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */,
 				C8B12DBC1FD6459D0000DEB0 /* LaunchScreen.storyboard */,
@@ -267,6 +272,7 @@
 			files = (
 				C8B12DE51FD6461F0000DEB0 /* WilsonListTableVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
+				C857486D1FE9390E00E31F7B /* GestureVC.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
