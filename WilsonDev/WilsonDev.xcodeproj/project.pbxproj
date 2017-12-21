@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C857486D1FE9390E00E31F7B /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C857486C1FE9390E00E31F7B /* GestureVC.m */; };
+		C80883291FEB5BB80000D94C /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80883281FEB5BB80000D94C /* GestureVC.m */; };
+		C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */; };
+		C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832F1FEB9FD60000D94C /* WilsonDrawView.m */; };
 		C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */; };
 		C8B12DB91FD6459D0000DEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DB71FD6459D0000DEB0 /* Main.storyboard */; };
 		C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */; };
@@ -36,8 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C857486B1FE9390E00E31F7B /* GestureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureVC.h; sourceTree = "<group>"; };
-		C857486C1FE9390E00E31F7B /* GestureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureVC.m; sourceTree = "<group>"; };
+		C80883271FEB5BB80000D94C /* GestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureVC.h; sourceTree = "<group>"; };
+		C80883281FEB5BB80000D94C /* GestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureVC.m; sourceTree = "<group>"; };
+		C808832A1FEB9EB70000D94C /* DrawRectViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawRectViewVC.h; sourceTree = "<group>"; };
+		C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectViewVC.m; sourceTree = "<group>"; };
+		C808832E1FEB9FD60000D94C /* WilsonDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonDrawView.h; sourceTree = "<group>"; };
+		C808832F1FEB9FD60000D94C /* WilsonDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonDrawView.m; sourceTree = "<group>"; };
 		C8B12DAE1FD6459D0000DEB0 /* WilsonDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilsonDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B12DB11FD6459D0000DEB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C80883261FEB5BB80000D94C /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				C80883271FEB5BB80000D94C /* GestureVC.h */,
+				C80883281FEB5BB80000D94C /* GestureVC.m */,
+				C808832A1FEB9EB70000D94C /* DrawRectViewVC.h */,
+				C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		C808832D1FEB9FBA0000D94C /* WilsonView */ = {
+			isa = PBXGroup;
+			children = (
+				C808832E1FEB9FD60000D94C /* WilsonDrawView.h */,
+				C808832F1FEB9FD60000D94C /* WilsonDrawView.m */,
+			);
+			path = WilsonView;
+			sourceTree = "<group>";
+		};
 		C8B12DA51FD6459D0000DEB0 = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +134,8 @@
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8B12DE31FD6461F0000DEB0 /* WilsonListTableVC.h */,
 				C8B12DE41FD6461F0000DEB0 /* WilsonListTableVC.m */,
-				C857486B1FE9390E00E31F7B /* GestureVC.h */,
-				C857486C1FE9390E00E31F7B /* GestureVC.m */,
+				C80883261FEB5BB80000D94C /* Container */,
+				C808832D1FEB9FBA0000D94C /* WilsonView */,
 				C8B12DB71FD6459D0000DEB0 /* Main.storyboard */,
 				C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */,
 				C8B12DBC1FD6459D0000DEB0 /* LaunchScreen.storyboard */,
@@ -270,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */,
+				C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */,
 				C8B12DE51FD6461F0000DEB0 /* WilsonListTableVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
-				C857486D1FE9390E00E31F7B /* GestureVC.m in Sources */,
+				C80883291FEB5BB80000D94C /* GestureVC.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,31 +16,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self customSubviews];
     [self addGestureRecongizer];
 }
 
+- (void)customSubviews {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+#pragma mark - TapGesture exclusive
 - (void)addGestureRecongizer {
+    NSString *content = @"1：tap1 and tap2 both are not Synchronized execution when called 'requireGestureRecognizerToFail'. click the green area below to start test, check log ";
+
+    const CGFloat titleH = 50;
+    
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, titleH, CGRectGetWidth([UIScreen mainScreen].bounds), 100)];
+    topView.backgroundColor = [UIColor colorWithRed:29/255.0 green:150/255.0 blue:45/255.0 alpha:1];
+    [self.view addSubview:topView];
+    
+    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, CGRectGetWidth([UIScreen mainScreen].bounds)-20, titleH)];
+    titleLab.font = [UIFont systemFontOfSize:12];
+    titleLab.lineBreakMode = NSLineBreakByCharWrapping;
+    titleLab.numberOfLines = 0;
+    titleLab.text = content;
+    [titleLab sizeToFit];
+    [titleLab layoutSubviews];
+    [self.view addSubview:titleLab];
     
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap1:)];
     tap1.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:tap1];
+    [topView addGestureRecognizer:tap1];
     UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap2:)];
     tap2.numberOfTapsRequired = 2;
-    [self.view addGestureRecognizer:tap2];
-    /*
-     *  当tap2手势触发失败时才会触发tap1手势
-     *  若不这样操作，则两个手势都会触发
-     */
+    [topView addGestureRecognizer:tap2];
+    
     [tap1 requireGestureRecognizerToFail:tap2];
    
 }
 
 -(void)tap1:(UITapGestureRecognizer *)tap1 {
-    NSLog(@"tap1手势触发");
+    NSLog(@"tap1 action");
 }
 
 -(void)tap2:(UITapGestureRecognizer *)tap2 {
-    NSLog(@"tap2手势触发");
+    NSLog(@"tap2 action");
 }
 
 
