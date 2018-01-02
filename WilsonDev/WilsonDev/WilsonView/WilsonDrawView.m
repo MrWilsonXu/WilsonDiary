@@ -27,7 +27,10 @@ const CGFloat arrowWidthHeight = 10;
 
 - (instancetype)init {
     if (self = [super initWithFrame:CGRectZero]) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
+        self.layer.shadowOpacity = 0.5;
+        self.layer.shadowRadius = 3.0f;
+        self.layer.shadowOffset = CGSizeMake(2, 2);
         self.arrowDirection = WilsonArrowDirectionNone;
     }
     return self;
