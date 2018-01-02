@@ -9,7 +9,7 @@ target 'WilsonDev' do
 
   target 'WilsonDevTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'AFNetworking', '~> 3.1.0'
   end
 
   target 'WilsonDevUITests' do
