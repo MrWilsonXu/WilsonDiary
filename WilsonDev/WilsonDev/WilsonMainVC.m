@@ -1,14 +1,15 @@
 //
-//  WilsonListTableVC.m
+//  WilsonMainVC.m
 //  WilsonDev
 //
-//  Created by Wilson on 2017/12/5.
-//  Copyright © 2017年 Wilson. All rights reserved.
+//  Created by Wilson on 2018/1/9.
+//  Copyright © 2018年 Wilson. All rights reserved.
 //
 
-#import "WilsonListTableVC.h"
+#import "WilsonMainVC.h"
 #import "GestureVC.h"
 #import "DrawRectViewVC.h"
+#import "SDAutolayout.h"
 
 @interface WilsonModel : NSObject
 
@@ -22,15 +23,15 @@
 @implementation WilsonModel
 @end
 
-@interface WilsonListTableVC ()
+@interface WilsonMainVC ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
 @end
 
-NSString * const TableViewCellReuseIdentify = @"TableViewCellReuseIdentify";
-
-@implementation WilsonListTableVC
+@implementation WilsonMainVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,16 +41,17 @@ NSString * const TableViewCellReuseIdentify = @"TableViewCellReuseIdentify";
 
 - (void)customViews {
     self.title = @"iOS-Diary";
-    self.clearsSelectionOnViewWillAppear = NO;
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellReuseIdentify];
+    self.tableView.clearsContextBeforeDrawing = NO;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.tableView];
+    
+    self.tableView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
 
 - (void)customDataSource {
     NSString *vc1 = NSStringFromClass([GestureVC class]);
     NSString *vc2 = NSStringFromClass([DrawRectViewVC class]);
-   
+    
     WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"手势操作" vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
     
@@ -80,20 +82,20 @@ NSString * const TableViewCellReuseIdentify = @"TableViewCellReuseIdentify";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellReuseIdentify forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
     WilsonModel *model = self.dataSource[indexPath.row];
     cell.textLabel.text = model.title;
-    
+    cell.contentView.backgroundColor = [UIColor yellowColor];
     return cell;
 }
 
@@ -102,41 +104,6 @@ NSString * const TableViewCellReuseIdentify = @"TableViewCellReuseIdentify";
     model.DidSelect();
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Getter
 
 - (NSMutableArray *)dataSource {
@@ -144,6 +111,22 @@ NSString * const TableViewCellReuseIdentify = @"TableViewCellReuseIdentify";
         self.dataSource = [NSMutableArray array];
     }
     return _dataSource;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.backgroundColor = [UIColor lightGrayColor];
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CELL"];
+    }
+    return _tableView;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*
@@ -155,10 +138,5 @@ NSString * const TableViewCellReuseIdentify = @"TableViewCellReuseIdentify";
     // Pass the selected object to the new view controller.
 }
 */
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

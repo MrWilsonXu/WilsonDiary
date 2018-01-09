@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WilsonMainVC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    WilsonMainVC *vc = [[WilsonMainVC alloc] init];
+    UINavigationController *nva = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nva;
+    
+    if (![self.window isKeyWindow]) {
+        [self.window makeKeyAndVisible];
+    }
     return YES;
 }
 
