@@ -41,11 +41,7 @@
 
 - (void)customViews {
     self.title = @"iOS-Diary";
-    self.tableView.clearsContextBeforeDrawing = NO;
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:self.tableView];
-    
-    self.tableView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
 
 - (void)customDataSource {
@@ -82,12 +78,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.dataSource.count;
 }
 
@@ -118,8 +112,9 @@
         self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.backgroundColor = [UIColor lightGrayColor];
+        _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CELL"];
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     }
     return _tableView;
 }

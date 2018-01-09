@@ -19,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     WilsonMainVC *vc = [[WilsonMainVC alloc] init];
     UINavigationController *nva = [[UINavigationController alloc] initWithRootViewController:vc];
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = nva;
     
     if (![self.window isKeyWindow]) {
