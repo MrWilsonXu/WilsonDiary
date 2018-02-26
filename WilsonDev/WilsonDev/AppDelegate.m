@@ -27,8 +27,7 @@
     if (![self.window isKeyWindow]) {
         [self.window makeKeyAndVisible];
     }
-    
-    NSString *path = NSHomeDirectory();
+   
     NSString *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
     
     NSLog(@"%@",documentPath);
