@@ -7,13 +7,11 @@ target 'WilsonDev' do
 
   # Pods for WilsonDev
 
-  target 'WilsonDevTests' do
-    inherit! :search_paths
-    pod 'SDAutoLayout', '~> 2.2.0'
-    pod 'Masonry', '~> 1.1.0'
-    pod 'AFNetworking', '~> 3.1.0'
-    pod 'Realm', '~> 3.1.0'
-  end
+  inherit! :search_paths
+  pod 'SDAutoLayout', '~> 2.2.0'
+  pod 'Masonry', '~> 1.1.0'
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'Realm', '~> 3.1.0'
 
   target 'WilsonDevUITests' do
     inherit! :search_paths
