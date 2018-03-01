@@ -12,7 +12,7 @@
 
 @property (assign, nonatomic) CGPoint arrowPoint;
 
-/*
+/**
  *  default is WilsonArrowDirectionNone
  */
 @property (assign, nonatomic) WilsonArrowDirection arrowDirection;

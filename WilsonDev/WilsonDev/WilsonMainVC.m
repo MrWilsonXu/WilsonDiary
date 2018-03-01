@@ -9,8 +9,7 @@
 #import "WilsonMainVC.h"
 #import "GestureVC.h"
 #import "DrawRectViewVC.h"
-
-#import <Realm/Realm.h>
+#import "AppStoreTransitionVC.h"
 
 #import "SDAutolayout.h"
 
@@ -40,7 +39,6 @@
     [super viewDidLoad];
     [self customViews];
     [self customDataSource];
-    [self setRealmDataBase];
 }
 
 - (void)customViews {
@@ -51,12 +49,15 @@
 - (void)customDataSource {
     NSString *vc1 = NSStringFromClass([GestureVC class]);
     NSString *vc2 = NSStringFromClass([DrawRectViewVC class]);
+    NSString *vc3 = NSStringFromClass([AppStoreTransitionVC class]);
     
     WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"手势操作" vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
+    WilsonModel *appStore = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"仿appStore转场动画" vc:vc3];
     
     [self.dataSource addObject:gesture];
     [self.dataSource addObject:drawView];
+    [self.dataSource addObject:appStore];
     
     [self.tableView reloadData];
 }
@@ -69,28 +70,6 @@
         [self performSelector:sel withObject:vc];
     };
     return model;
-}
-
-/**
- *  设置realm数据库相关
- */
-- (void)setRealmDataBase {
-    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
-    config.shouldCompactOnLaunch = ^BOOL(NSUInteger totalBytes, NSUInteger usedBytes){
-        // totalBytes 指的是硬盘上文件的大小（以字节为单位）(数据 + 可用空间)
-        // usedBytes 指的是文件中数据所使用的字节数
-        
-        // 如果文件的大小超过 100 MB且已用空间低于 50%时，进行压缩
-        NSUInteger oneHundredMB = 100 * 1024 * 1024;
-        return (totalBytes > oneHundredMB) && (usedBytes / totalBytes) < 0.5;
-    };
-    
-    NSError *error = nil;
-    // 如果配置条件满足，那么 Realm 就会在首次打开时被压缩
-    RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:&error];
-    if (error) {
-        // 处理打开 Realm 或者压缩时产生的错误
-    }
 }
 
 #pragma mark - Action

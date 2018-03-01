@@ -11,6 +11,9 @@
 		C80883291FEB5BB80000D94C /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80883281FEB5BB80000D94C /* GestureVC.m */; };
 		C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */; };
 		C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832F1FEB9FD60000D94C /* WilsonDrawView.m */; };
+		C80AAE16204793ED00807652 /* AppStoreTransitionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE15204793ED00807652 /* AppStoreTransitionVC.m */; };
+		C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */; };
+		C80AAE22204806C200807652 /* TransAppStorePurposeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE21204806C200807652 /* TransAppStorePurposeVC.m */; };
 		C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A87636200489A700CF376D /* WilsonMainVC.m */; };
 		C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */; };
 		C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */; };
@@ -49,6 +52,13 @@
 		C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectViewVC.m; sourceTree = "<group>"; };
 		C808832E1FEB9FD60000D94C /* WilsonDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonDrawView.h; sourceTree = "<group>"; };
 		C808832F1FEB9FD60000D94C /* WilsonDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonDrawView.m; sourceTree = "<group>"; };
+		C80AAE14204793ED00807652 /* AppStoreTransitionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStoreTransitionVC.h; sourceTree = "<group>"; };
+		C80AAE15204793ED00807652 /* AppStoreTransitionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStoreTransitionVC.m; sourceTree = "<group>"; };
+		C80AAE172047DA4D00807652 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C80AAE1C2047FE5700807652 /* WilsonTransitonMar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonTransitonMar.h; sourceTree = "<group>"; };
+		C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonTransitonMar.m; sourceTree = "<group>"; };
+		C80AAE20204806C200807652 /* TransAppStorePurposeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransAppStorePurposeVC.h; sourceTree = "<group>"; };
+		C80AAE21204806C200807652 /* TransAppStorePurposeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransAppStorePurposeVC.m; sourceTree = "<group>"; };
 		C8A87635200489A700CF376D /* WilsonMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonMainVC.h; sourceTree = "<group>"; };
 		C8A87636200489A700CF376D /* WilsonMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonMainVC.m; sourceTree = "<group>"; };
 		C8B12DAE1FD6459D0000DEB0 /* WilsonDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilsonDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +132,9 @@
 				C80883281FEB5BB80000D94C /* GestureVC.m */,
 				C808832A1FEB9EB70000D94C /* DrawRectViewVC.h */,
 				C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */,
+				C80AAE14204793ED00807652 /* AppStoreTransitionVC.h */,
+				C80AAE15204793ED00807652 /* AppStoreTransitionVC.m */,
+				C80AAE1F2048069800807652 /* TransitionPurposeVCs */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -133,6 +146,24 @@
 				C808832F1FEB9FD60000D94C /* WilsonDrawView.m */,
 			);
 			path = WilsonView;
+			sourceTree = "<group>";
+		};
+		C80AAE182047F92000807652 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C80AAE1C2047FE5700807652 /* WilsonTransitonMar.h */,
+				C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C80AAE1F2048069800807652 /* TransitionPurposeVCs */ = {
+			isa = PBXGroup;
+			children = (
+				C80AAE20204806C200807652 /* TransAppStorePurposeVC.h */,
+				C80AAE21204806C200807652 /* TransAppStorePurposeVC.m */,
+			);
+			path = TransitionPurposeVCs;
 			sourceTree = "<group>";
 		};
 		C8B12DA51FD6459D0000DEB0 = {
@@ -164,12 +195,14 @@
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8A87635200489A700CF376D /* WilsonMainVC.h */,
 				C8A87636200489A700CF376D /* WilsonMainVC.m */,
+				C80AAE182047F92000807652 /* Manager */,
 				C8C1ED8E2043D29B00F54C43 /* Realm */,
 				C80883261FEB5BB80000D94C /* Container */,
 				C808832D1FEB9FBA0000D94C /* WilsonView */,
 				C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */,
 				C8B12DBF1FD6459D0000DEB0 /* Info.plist */,
 				C8B12DC01FD6459D0000DEB0 /* main.m */,
+				C80AAE172047DA4D00807652 /* PrefixHeader.pch */,
 			);
 			path = WilsonDev;
 			sourceTree = "<group>";
@@ -440,6 +473,9 @@
 				C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
 				C80883291FEB5BB80000D94C /* GestureVC.m in Sources */,
+				C80AAE22204806C200807652 /* TransAppStorePurposeVC.m in Sources */,
+				C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */,
+				C80AAE16204793ED00807652 /* AppStoreTransitionVC.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +625,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
 				INFOPLIST_FILE = WilsonDev/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ForeverMamba.WilsonDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -606,7 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
 				INFOPLIST_FILE = WilsonDev/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ForeverMamba.WilsonDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
