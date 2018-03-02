@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppStoreTransitionVC : UIViewController
+@interface TransitionMainVC : UIViewController
 
 @end

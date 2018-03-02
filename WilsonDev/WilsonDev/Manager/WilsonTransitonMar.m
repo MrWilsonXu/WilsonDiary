@@ -67,11 +67,11 @@
     [containerView addSubview:tempView];
     [containerView addSubview:toVC.view];
     //设置vc2的frame，因为这里vc2present出来不是全屏，且初始的时候在底部，如果不设置frame的话默认就是整个屏幕咯，这里containerView的frame就是整个屏幕
-    toVC.view.frame = CGRectMake(0, containerView.frame.size.height, containerView.frame.size.width, 400);
+    toVC.view.frame = CGRectMake(0, CGRectGetHeight(containerView.frame), CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame));
     //开始动画吧，使用产生弹簧效果的动画API
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 usingSpringWithDamping:0.55 initialSpringVelocity:1.0 / 0.55 options:0 animations:^{
         //首先我们让vc2向上移动
-        toVC.view.transform = CGAffineTransformMakeTranslation(0, -400);
+        toVC.view.transform = CGAffineTransformMakeTranslation(0, -CGRectGetHeight(containerView.frame));
         //然后让截图视图缩小一点即可
         tempView.transform = CGAffineTransformMakeScale(0.85, 0.85);
     } completion:^(BOOL finished) {

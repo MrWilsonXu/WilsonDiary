@@ -6,9 +6,9 @@
 //  Copyright © 2018 Wilson. All rights reserved.
 //
 
-#import "AppStoreTransitionVC.h"
+#import "TransitionMainVC.h"
 #import "UIView+SDAutolayout.h"
-#import "TransAppStorePurposeVC.h"
+#import "TransitionCustomVC.h"
 
 typedef NS_ENUM(NSInteger, TransitionType){
     TransitionStyleCoverVertical,
@@ -28,13 +28,13 @@ typedef NS_ENUM(NSInteger, TransitionType){
 @implementation TransitionTypeModel
 @end
 
-@interface AppStoreTransitionVC ()<UIViewControllerTransitioningDelegate>
+@interface TransitionMainVC ()<UIViewControllerTransitioningDelegate>
 
 @property (strong, nonatomic) NSMutableArray *transitions;
 
 @end
 
-@implementation AppStoreTransitionVC
+@implementation TransitionMainVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, TransitionType){
     TransitionTypeModel *modelHorizontal = [self createDataTitle:@"Horizontal-system" transitionType:TransitionStyleFlipHorizontal];
     TransitionTypeModel *modelDissolve = [self createDataTitle:@"Dissolve-system" transitionType:TransitionStyleCrossDissolve];
     TransitionTypeModel *modelPartialCurl = [self createDataTitle:@"PartialCurl-system" transitionType:TransitionStylePartialCurl];
-    TransitionTypeModel *modelAppStore = [self createDataTitle:@"AppStore" transitionType:TransitionStyleAppStore];
+    TransitionTypeModel *modelAppStore = [self createDataTitle:@"Custom" transitionType:TransitionStyleAppStore];
     
     self.transitions = [NSMutableArray array];
     
@@ -157,40 +157,14 @@ typedef NS_ENUM(NSInteger, TransitionType){
         
         [self presentViewController:vc animated:YES completion:nil];
     } else {
-        TransAppStorePurposeVC *vc = [[TransAppStorePurposeVC alloc] init];
-        [self presentViewController:vc animated:YES completion:nil];
+        TransitionCustomVC *vc = [[TransitionCustomVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
 - (void)backVC:(UIButton *)sender {
    [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-#pragma mark - UIViewControllerTransitioningDelegate
-
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    NSLog(@"%@",presented);
-    NSLog(@"%@",presenting);
-    NSLog(@"%@",source);
-    return nil;
-}
-
-/*
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    
-}
-
-- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
-    
-}
-
-- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator {
-    
-}
-
-- (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source NS_AVAILABLE_IOS(8_0) {
-    
-}*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

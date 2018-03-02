@@ -11,9 +11,10 @@
 		C80883291FEB5BB80000D94C /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80883281FEB5BB80000D94C /* GestureVC.m */; };
 		C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */; };
 		C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832F1FEB9FD60000D94C /* WilsonDrawView.m */; };
-		C80AAE16204793ED00807652 /* AppStoreTransitionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE15204793ED00807652 /* AppStoreTransitionVC.m */; };
+		C80AAE16204793ED00807652 /* TransitionMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE15204793ED00807652 /* TransitionMainVC.m */; };
 		C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */; };
-		C80AAE22204806C200807652 /* TransAppStorePurposeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE21204806C200807652 /* TransAppStorePurposeVC.m */; };
+		C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC0392048F4B70041F894 /* TransitionCustomVC.m */; };
+		C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */; };
 		C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A87636200489A700CF376D /* WilsonMainVC.m */; };
 		C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */; };
 		C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */; };
@@ -52,13 +53,15 @@
 		C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectViewVC.m; sourceTree = "<group>"; };
 		C808832E1FEB9FD60000D94C /* WilsonDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonDrawView.h; sourceTree = "<group>"; };
 		C808832F1FEB9FD60000D94C /* WilsonDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonDrawView.m; sourceTree = "<group>"; };
-		C80AAE14204793ED00807652 /* AppStoreTransitionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStoreTransitionVC.h; sourceTree = "<group>"; };
-		C80AAE15204793ED00807652 /* AppStoreTransitionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStoreTransitionVC.m; sourceTree = "<group>"; };
+		C80AAE14204793ED00807652 /* TransitionMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionMainVC.h; sourceTree = "<group>"; };
+		C80AAE15204793ED00807652 /* TransitionMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionMainVC.m; sourceTree = "<group>"; };
 		C80AAE172047DA4D00807652 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C80AAE1C2047FE5700807652 /* WilsonTransitonMar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonTransitonMar.h; sourceTree = "<group>"; };
 		C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonTransitonMar.m; sourceTree = "<group>"; };
-		C80AAE20204806C200807652 /* TransAppStorePurposeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransAppStorePurposeVC.h; sourceTree = "<group>"; };
-		C80AAE21204806C200807652 /* TransAppStorePurposeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransAppStorePurposeVC.m; sourceTree = "<group>"; };
+		C85EC0382048F4B70041F894 /* TransitionCustomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionCustomVC.h; sourceTree = "<group>"; };
+		C85EC0392048F4B70041F894 /* TransitionCustomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionCustomVC.m; sourceTree = "<group>"; };
+		C85EC03B2048F4DF0041F894 /* TransitionCustonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionCustonCell.h; sourceTree = "<group>"; };
+		C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionCustonCell.m; sourceTree = "<group>"; };
 		C8A87635200489A700CF376D /* WilsonMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonMainVC.h; sourceTree = "<group>"; };
 		C8A87636200489A700CF376D /* WilsonMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonMainVC.m; sourceTree = "<group>"; };
 		C8B12DAE1FD6459D0000DEB0 /* WilsonDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilsonDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,8 +135,10 @@
 				C80883281FEB5BB80000D94C /* GestureVC.m */,
 				C808832A1FEB9EB70000D94C /* DrawRectViewVC.h */,
 				C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */,
-				C80AAE14204793ED00807652 /* AppStoreTransitionVC.h */,
-				C80AAE15204793ED00807652 /* AppStoreTransitionVC.m */,
+				C80AAE14204793ED00807652 /* TransitionMainVC.h */,
+				C80AAE15204793ED00807652 /* TransitionMainVC.m */,
+				C85EC0382048F4B70041F894 /* TransitionCustomVC.h */,
+				C85EC0392048F4B70041F894 /* TransitionCustomVC.m */,
 				C80AAE1F2048069800807652 /* TransitionPurposeVCs */,
 			);
 			path = Container;
@@ -144,6 +149,8 @@
 			children = (
 				C808832E1FEB9FD60000D94C /* WilsonDrawView.h */,
 				C808832F1FEB9FD60000D94C /* WilsonDrawView.m */,
+				C85EC03B2048F4DF0041F894 /* TransitionCustonCell.h */,
+				C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */,
 			);
 			path = WilsonView;
 			sourceTree = "<group>";
@@ -160,8 +167,6 @@
 		C80AAE1F2048069800807652 /* TransitionPurposeVCs */ = {
 			isa = PBXGroup;
 			children = (
-				C80AAE20204806C200807652 /* TransAppStorePurposeVC.h */,
-				C80AAE21204806C200807652 /* TransAppStorePurposeVC.m */,
 			);
 			path = TransitionPurposeVCs;
 			sourceTree = "<group>";
@@ -473,9 +478,10 @@
 				C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
 				C80883291FEB5BB80000D94C /* GestureVC.m in Sources */,
-				C80AAE22204806C200807652 /* TransAppStorePurposeVC.m in Sources */,
 				C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */,
-				C80AAE16204793ED00807652 /* AppStoreTransitionVC.m in Sources */,
+				C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */,
+				C80AAE16204793ED00807652 /* TransitionMainVC.m in Sources */,
+				C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

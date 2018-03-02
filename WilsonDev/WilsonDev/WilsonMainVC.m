@@ -9,7 +9,7 @@
 #import "WilsonMainVC.h"
 #import "GestureVC.h"
 #import "DrawRectViewVC.h"
-#import "AppStoreTransitionVC.h"
+#import "TransitionCustomVC.h"
 
 #import "SDAutolayout.h"
 
@@ -42,22 +42,26 @@
 }
 
 - (void)customViews {
-    self.title = @"iOS-Diary";
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+        self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
+    }
+    self.navigationItem.title = @"iOS-Diary";
     [self.view addSubview:self.tableView];
 }
 
 - (void)customDataSource {
     NSString *vc1 = NSStringFromClass([GestureVC class]);
     NSString *vc2 = NSStringFromClass([DrawRectViewVC class]);
-    NSString *vc3 = NSStringFromClass([AppStoreTransitionVC class]);
+    NSString *vc3 = NSStringFromClass([TransitionCustomVC class]);
     
     WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"手势操作" vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
-    WilsonModel *appStore = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"仿appStore转场动画" vc:vc3];
+    WilsonModel *custom = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"自定义转场动画" vc:vc3];
     
     [self.dataSource addObject:gesture];
     [self.dataSource addObject:drawView];
-    [self.dataSource addObject:appStore];
+    [self.dataSource addObject:custom];
     
     [self.tableView reloadData];
 }
