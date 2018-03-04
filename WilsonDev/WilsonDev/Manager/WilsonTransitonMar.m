@@ -7,6 +7,10 @@
 //
 
 #import "WilsonTransitonMar.h"
+#import "TransitionCustomVC.h"
+#import "AppStroeMainVC.h"
+
+#import "TransitionCustonCell.h"
 
 @interface WilsonTransitonMar()
 
@@ -37,9 +41,20 @@
                 [self presentAnimation:transitionContext];
             }
             break;
+            
             case WilsonTransitonMarTypeDismiss:{
                 [self dismissAnimation:transitionContext];
             }
+            break;
+            
+        case WilsonTransitonMarTypePush:{
+            [self doPushAnimation:transitionContext];
+        }
+            break;
+            
+        case WilsonTransitonMarTypePop:{
+            [self doPopAnimation:transitionContext];
+        }
             break;
         default:
             break;
@@ -52,65 +67,81 @@
 
 #pragma mark - Helper
 
+/**
+ *  Present
+ */
 - (void)presentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
-    //通过viewControllerForKey取出转场前后的两个控制器，这里toVC就是vc1、fromVC就是vc2
-    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    //snapshotViewAfterScreenUpdates可以对某个视图截图，我们采用对这个截图做动画代替直接对vc1做动画，因为在手势过渡中直接使用vc1动画会和手势有冲突，如果不需要实现手势的话，就可以不是用截图视图了，大家可以自行尝试一下
-    UIView *tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
-    tempView.frame = fromVC.view.frame;
-    //因为对截图做动画，vc1就可以隐藏了
-    fromVC.view.hidden = YES;
-    //这里有个重要的概念containerView，如果要对视图做转场动画，视图就必须要加入containerView中才能进行，可以理解containerView管理者所有做转场动画的视图
+    TransitionCustomVC *fromVC = (TransitionCustomVC *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    AppStroeMainVC *toVC = (AppStroeMainVC *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    //拿到当前点击的cell的imageView
+    TransitionCustonCell *cell = (TransitionCustonCell *)[fromVC.tableView cellForRowAtIndexPath:fromVC.currentIndexPath];
     UIView *containerView = [transitionContext containerView];
-    //将截图视图和vc2的view都加入ContainerView中
-    [containerView addSubview:tempView];
+    //snapshotViewAfterScreenUpdates 对cell的imageView截图保存成另一个视图用于过渡，并将视图转换到当前控制器的坐标
+    UIView *tempView = [cell.imageView snapshotViewAfterScreenUpdates:NO];
+    tempView.frame = [cell.imageView convertRect:cell.imageView.bounds toView: containerView];
+    //设置动画前的各个控件的状态
+    cell.imageView.hidden = YES;
+    toVC.view.alpha = 0;
+    toVC.imgView.hidden = YES;
+    //tempView 添加到containerView中，要保证在最前方，所以后添加
     [containerView addSubview:toVC.view];
-    //设置vc2的frame，因为这里vc2present出来不是全屏，且初始的时候在底部，如果不设置frame的话默认就是整个屏幕咯，这里containerView的frame就是整个屏幕
-    toVC.view.frame = CGRectMake(0, CGRectGetHeight(containerView.frame), CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame));
-    //开始动画吧，使用产生弹簧效果的动画API
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 usingSpringWithDamping:0.55 initialSpringVelocity:1.0 / 0.55 options:0 animations:^{
-        //首先我们让vc2向上移动
-        toVC.view.transform = CGAffineTransformMakeTranslation(0, -CGRectGetHeight(containerView.frame));
-        //然后让截图视图缩小一点即可
-        tempView.transform = CGAffineTransformMakeScale(0.85, 0.85);
+    [containerView addSubview:tempView];
+    //开始做动画
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:0.55 initialSpringVelocity:1 / 0.55 options:0 animations:^{
+        tempView.frame = [toVC.imgView convertRect:toVC.imgView.bounds toView:containerView];
+        toVC.view.alpha = 1;
     } completion:^(BOOL finished) {
-        //使用如下代码标记整个转场过程是否正常完成[transitionContext transitionWasCancelled]代表手势是否取消了，如果取消了就传NO表示转场失败，反之亦然，如果不是用手势的话直接传YES也是可以的，我们必须标记转场的状态，系统才知道处理转场后的操作，否者认为你一直还在，会出现无法交互的情况，切记
+        tempView.hidden = YES;
+        toVC.imgView.hidden = NO;
+        //如果动画过渡取消了就标记不完成，否则才完成，这里可以直接写YES，如果有手势过渡才需要判断，必须标记，否则系统不会中动画完成的部署，会出现无法交互之类的bug
+        [transitionContext completeTransition:YES];
+    }];
+}
+
+/**
+ *  Dismiss
+ */
+- (void)dismissAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
+    AppStroeMainVC *fromVC = (AppStroeMainVC *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    TransitionCustomVC *toVC = (TransitionCustomVC *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    TransitionCustonCell *cell = (TransitionCustonCell *)[toVC.tableView cellForRowAtIndexPath:toVC.currentIndexPath];
+    UIView *containerView = [transitionContext containerView];
+    //这里的lastView就是push时候初始化的那个tempView
+    UIView *tempView = containerView.subviews.lastObject;
+    //设置初始状态
+    cell.imageView.hidden = YES;
+    fromVC.imgView.hidden = YES;
+    tempView.hidden = NO;
+    [containerView insertSubview:toVC.view atIndex:0];
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:0.55 initialSpringVelocity:1 / 0.55 options:0 animations:^{
+        tempView.frame = [cell.imageView convertRect:cell.imageView.bounds toView:containerView];
+        fromVC.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        //由于加入了手势必须判断
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-        //转场失败后的处理
-        if ([transitionContext transitionWasCancelled]) {
-            //失败后，我们要把vc1显示出来
-            fromVC.view.hidden = NO;
-            //然后移除截图视图，因为下次触发present会重新截图
+        if ([transitionContext transitionWasCancelled]) {//手势取消了，原来隐藏的imageView要显示出来
+            //失败了隐藏tempView，显示fromVC.imageView
+            tempView.hidden = YES;
+            fromVC.imgView.hidden = NO;
+        }else{//手势成功，cell的imageView也要显示出来
+            //成功了移除tempView，下一次pop的时候又要创建，然后显示cell的imageView
+            cell.imageView.hidden = NO;
             [tempView removeFromSuperview];
         }
     }];
 }
 
-- (void)dismissAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
-    //注意在dismiss的时候fromVC就是vc2了，toVC才是VC1了，注意理解这个逻辑关系
-    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    //参照present动画的逻辑，present成功后，containerView的最后一个子视图就是截图视图，我们将其取出准备动画
-    UIView *containerView = [transitionContext containerView];
-    NSArray *subviewsArray = containerView.subviews;
-    UIView *tempView = subviewsArray[MIN(subviewsArray.count, MAX(0, subviewsArray.count - 2))];
-    //动画吧
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-        //因为present的时候都是使用的transform，这里的动画只需要将transform恢复就可以了
-        fromVC.view.transform = CGAffineTransformIdentity;
-        tempView.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-        if ([transitionContext transitionWasCancelled]) {
-            //失败了接标记失败
-            [transitionContext completeTransition:NO];
-        }else{
-            //如果成功了，我们需要标记成功，同时让vc1显示出来，然后移除截图视图，
-            [transitionContext completeTransition:YES];
-            toVC.view.hidden = NO;
-            [tempView removeFromSuperview];
-        }
-    }];
+/**
+ *  执行push过渡动画
+ */
+- (void)doPushAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
+   
+}
+/**
+ *  执行pop过渡动画
+ */
+- (void)doPopAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
+  
 }
 
 @end

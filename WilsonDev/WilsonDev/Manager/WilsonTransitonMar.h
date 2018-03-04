@@ -11,7 +11,9 @@
 
 typedef NS_ENUM(NSUInteger, WilsonTransitonMarType) {
     WilsonTransitonMarTypePresent,
-    WilsonTransitonMarTypeDismiss
+    WilsonTransitonMarTypeDismiss,
+    WilsonTransitonMarTypePush,
+    WilsonTransitonMarTypePop
 };
 
 @interface WilsonTransitonMar : NSObject<UIViewControllerAnimatedTransitioning>

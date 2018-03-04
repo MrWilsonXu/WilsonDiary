@@ -158,7 +158,7 @@ typedef NS_ENUM(NSInteger, TransitionType){
         [self presentViewController:vc animated:YES completion:nil];
     } else {
         TransitionCustomVC *vc = [[TransitionCustomVC alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 

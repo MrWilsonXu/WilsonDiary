@@ -9,12 +9,11 @@
 
 #import "TransitionCustomVC.h"
 #import <SDAutoLayout.h>
+#import "AppStroeMainVC.h"
 
 #import "TransitionCustonCell.h"
 
-@interface TransitionCustomVC ()<UITableViewDelegate,  UITableViewDataSource>
-
-@property (strong, nonatomic) UITableView *tableView;
+@interface TransitionCustomVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
@@ -58,6 +57,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self cellHeightForIndexPath:indexPath cellContentViewWidth:CGRectGetWidth(self.view.frame) tableView:tableView];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AppStroeMainVC *vc = [[AppStroeMainVC alloc] init];
+    NSString *imgStr = self.dataSource[indexPath.row];
+    vc.imgStr = imgStr;
+    self.currentIndexPath = indexPath;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark - Getter

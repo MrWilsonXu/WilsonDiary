@@ -10,4 +10,8 @@
 
 @interface TransitionCustomVC : UIViewController
 
+@property (strong, nonatomic) UITableView *tableView;
+
+@property (strong, nonatomic) NSIndexPath *currentIndexPath;
+
 @end

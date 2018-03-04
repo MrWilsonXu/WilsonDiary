@@ -9,7 +9,7 @@
 #import "WilsonMainVC.h"
 #import "GestureVC.h"
 #import "DrawRectViewVC.h"
-#import "TransitionCustomVC.h"
+#import "TransitionMainVC.h"
 
 #import "SDAutolayout.h"
 
@@ -53,11 +53,11 @@
 - (void)customDataSource {
     NSString *vc1 = NSStringFromClass([GestureVC class]);
     NSString *vc2 = NSStringFromClass([DrawRectViewVC class]);
-    NSString *vc3 = NSStringFromClass([TransitionCustomVC class]);
+    NSString *vc3 = NSStringFromClass([TransitionMainVC class]);
     
     WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"手势操作" vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
-    WilsonModel *custom = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"自定义转场动画" vc:vc3];
+    WilsonModel *custom = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"转场动画" vc:vc3];
     
     [self.dataSource addObject:gesture];
     [self.dataSource addObject:drawView];
@@ -103,6 +103,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     WilsonModel *model = self.dataSource[indexPath.row];
     model.DidSelect();
 }
