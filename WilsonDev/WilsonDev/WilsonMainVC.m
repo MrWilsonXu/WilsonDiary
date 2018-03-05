@@ -10,6 +10,7 @@
 #import "GestureVC.h"
 #import "DrawRectViewVC.h"
 #import "TransitionMainVC.h"
+#import "WeakStrongVC.h"
 
 #import "SDAutolayout.h"
 
@@ -54,14 +55,17 @@
     NSString *vc1 = NSStringFromClass([GestureVC class]);
     NSString *vc2 = NSStringFromClass([DrawRectViewVC class]);
     NSString *vc3 = NSStringFromClass([TransitionMainVC class]);
+    NSString *vc4 = NSStringFromClass([WeakStrongVC class]);
     
     WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"手势操作" vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
     WilsonModel *custom = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"转场动画" vc:vc3];
+    WilsonModel *weakStrong = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"weakStrong" vc:vc4];
     
     [self.dataSource addObject:gesture];
     [self.dataSource addObject:drawView];
     [self.dataSource addObject:custom];
+    [self.dataSource addObject:weakStrong];
     
     [self.tableView reloadData];
 }

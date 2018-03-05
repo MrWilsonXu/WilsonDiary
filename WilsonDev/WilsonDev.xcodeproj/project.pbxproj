@@ -16,6 +16,7 @@
 		C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC0392048F4B70041F894 /* TransitionCustomVC.m */; };
 		C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */; };
 		C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */; };
+		C882ACEF204C3B65001BC673 /* WeakStrongVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C882ACEE204C3B65001BC673 /* WeakStrongVC.m */; };
 		C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A87636200489A700CF376D /* WilsonMainVC.m */; };
 		C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */; };
 		C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */; };
@@ -65,6 +66,8 @@
 		C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionCustonCell.m; sourceTree = "<group>"; };
 		C85EC03E20494ABB0041F894 /* AppStroeMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStroeMainVC.h; sourceTree = "<group>"; };
 		C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStroeMainVC.m; sourceTree = "<group>"; };
+		C882ACED204C3B65001BC673 /* WeakStrongVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakStrongVC.h; sourceTree = "<group>"; };
+		C882ACEE204C3B65001BC673 /* WeakStrongVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakStrongVC.m; sourceTree = "<group>"; };
 		C8A87635200489A700CF376D /* WilsonMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonMainVC.h; sourceTree = "<group>"; };
 		C8A87636200489A700CF376D /* WilsonMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonMainVC.m; sourceTree = "<group>"; };
 		C8B12DAE1FD6459D0000DEB0 /* WilsonDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilsonDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +175,8 @@
 			children = (
 				C85EC03E20494ABB0041F894 /* AppStroeMainVC.h */,
 				C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */,
+				C882ACED204C3B65001BC673 /* WeakStrongVC.h */,
+				C882ACEE204C3B65001BC673 /* WeakStrongVC.m */,
 			);
 			path = TransitionPurposeVCs;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */,
 				C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */,
 				C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */,
+				C882ACEF204C3B65001BC673 /* WeakStrongVC.m in Sources */,
 				C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
 				C80883291FEB5BB80000D94C /* GestureVC.m in Sources */,
