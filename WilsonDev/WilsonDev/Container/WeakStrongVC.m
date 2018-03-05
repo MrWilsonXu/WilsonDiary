@@ -33,18 +33,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.titleStr addObserver:self forKeyPath:@"keyPath" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor greenColor];
     [self weakStrongHandle];
 }
 
 - (void)weakStrongHandle {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.navigationController popViewControllerAnimated:YES];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.wilsonTestClass.TestHandler(200);
-        });
+        self.wilsonTestClass.TestHandler(200);
     });
 
     /**
@@ -57,7 +53,6 @@
     self.wilsonTestClass.TestHandler = ^(NSUInteger result) {
         weakSelf.titleStr = @"WeakStrong";
         weakSelf.title = weakSelf.titleStr;
-        [weakSelf removeObserver:weakSelf forKeyPath:@"keyPath"];
     };
     
 }

@@ -59,8 +59,16 @@
     CGFloat viewHeight = viewWidth * proportion;
     
     self.headerView.frame = CGRectMake(0, 0, viewWidth, viewHeight);
+    self.imgView.frame = self.headerView.frame;
+    self.imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.imgStr]];
+ 
     [self.headerView addSubview:self.imgView];
-    self.imgView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
+}
+
+#pragma mark - Public
+
+- (void)setImgStr:(NSString *)imgStr {
+    _imgStr = imgStr;
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
@@ -84,13 +92,6 @@
         _headerView = [[UITableViewHeaderFooterView alloc] init];
     }
     return _headerView;
-}
-
-- (UIImageView *)imgView {
-    if (!_imgView) {
-        _imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.imgStr]];
-    }
-    return _imgView;
 }
 
 - (void)didReceiveMemoryWarning {

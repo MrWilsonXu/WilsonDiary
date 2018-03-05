@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSString *imgName;
 
+@property (strong, nonatomic) UIImageView *imgView;
+
 @end

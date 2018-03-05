@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
+@property (strong, nonatomic) UIButton *backBtn;
+
 @end
 
 #define CellIdentify  @"TransitionCustonCell"
@@ -26,20 +28,26 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.backBtn];
     
-    CGFloat topSpace = 20;
-    if (([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)) {
-        topSpace += 24;
-    }
-    self.tableView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
+    self.backBtn.sd_layout
+    .topSpaceToView(self.view, 40)
+    .leftSpaceToView(self.view, 20)
+    .rightSpaceToView(self.view, 20)
+    .heightIs(40);
+    
+    self.tableView.sd_layout
+    .topSpaceToView(self.backBtn, 0)
+    .leftSpaceToView(self.view, 0)
+    .rightSpaceToView(self.view, 0)
+    .bottomSpaceToView(self.view, 20);
+    
     [self.tableView reloadData];
     
-    if (@available(iOS 11.0, *)) {
-        self.navigationController.navigationBar.prefersLargeTitles = YES;
-        self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
-    }
-    self.navigationItem.title = @"AppStore-Trainsition";
-    
+}
+
+- (void)backToPresentVC:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UITableViewMethod
@@ -90,6 +98,18 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
+}
+
+- (UIButton *)backBtn {
+    if (!_backBtn) {
+        self.backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _backBtn.titleLabel.font = [UIFont systemFontOfSize:20 weight:1];
+        [_backBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [_backBtn setTitle:@"AppStore Transition" forState:UIControlStateNormal];
+        [_backBtn addTarget:self action:@selector(backToPresentVC:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _backBtn;
 }
 
 - (void)didReceiveMemoryWarning {

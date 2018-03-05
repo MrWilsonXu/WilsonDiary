@@ -11,8 +11,6 @@
 
 @interface TransitionCustonCell()
 
-@property (strong, nonatomic) UIImageView *imgView;
-
 @end
 
 @implementation TransitionCustonCell

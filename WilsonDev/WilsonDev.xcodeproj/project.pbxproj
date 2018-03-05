@@ -137,6 +137,8 @@
 		C80883261FEB5BB80000D94C /* Container */ = {
 			isa = PBXGroup;
 			children = (
+				C882ACED204C3B65001BC673 /* WeakStrongVC.h */,
+				C882ACEE204C3B65001BC673 /* WeakStrongVC.m */,
 				C80883271FEB5BB80000D94C /* GestureVC.h */,
 				C80883281FEB5BB80000D94C /* GestureVC.m */,
 				C808832A1FEB9EB70000D94C /* DrawRectViewVC.h */,
@@ -175,8 +177,6 @@
 			children = (
 				C85EC03E20494ABB0041F894 /* AppStroeMainVC.h */,
 				C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */,
-				C882ACED204C3B65001BC673 /* WeakStrongVC.h */,
-				C882ACEE204C3B65001BC673 /* WeakStrongVC.m */,
 			);
 			path = TransitionPurposeVCs;
 			sourceTree = "<group>";

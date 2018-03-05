@@ -73,22 +73,27 @@
 - (void)presentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
     TransitionCustomVC *fromVC = (TransitionCustomVC *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     AppStroeMainVC *toVC = (AppStroeMainVC *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    //拿到当前点击的cell的imageView
+    
     TransitionCustonCell *cell = (TransitionCustonCell *)[fromVC.tableView cellForRowAtIndexPath:fromVC.currentIndexPath];
     UIView *containerView = [transitionContext containerView];
-    //snapshotViewAfterScreenUpdates 对cell的imageView截图保存成另一个视图用于过渡，并将视图转换到当前控制器的坐标
-    UIView *tempView = [cell.imageView snapshotViewAfterScreenUpdates:NO];
-    tempView.frame = [cell.imageView convertRect:cell.imageView.bounds toView: containerView];
+
+    UIImageView *tempView = [[UIImageView alloc] initWithImage:cell.imgView.image];
+    tempView.layer.cornerRadius = 10.f;
+    tempView.clipsToBounds = YES;
+    tempView.frame = [cell.imgView convertRect:cell.imgView.bounds toView:containerView];
+    
     //设置动画前的各个控件的状态
-    cell.imageView.hidden = YES;
+    cell.imgView.hidden = YES;
     toVC.view.alpha = 0;
     toVC.imgView.hidden = YES;
+    
     //tempView 添加到containerView中，要保证在最前方，所以后添加
     [containerView addSubview:toVC.view];
     [containerView addSubview:tempView];
-    //开始做动画
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:0.55 initialSpringVelocity:1 / 0.55 options:0 animations:^{
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:0.75 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         tempView.frame = [toVC.imgView convertRect:toVC.imgView.bounds toView:containerView];
+        tempView.layer.cornerRadius = 0;
         toVC.view.alpha = 1;
     } completion:^(BOOL finished) {
         tempView.hidden = YES;
@@ -96,6 +101,7 @@
         //如果动画过渡取消了就标记不完成，否则才完成，这里可以直接写YES，如果有手势过渡才需要判断，必须标记，否则系统不会中动画完成的部署，会出现无法交互之类的bug
         [transitionContext completeTransition:YES];
     }];
+
 }
 
 /**
@@ -105,16 +111,22 @@
     AppStroeMainVC *fromVC = (AppStroeMainVC *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     TransitionCustomVC *toVC = (TransitionCustomVC *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     TransitionCustonCell *cell = (TransitionCustonCell *)[toVC.tableView cellForRowAtIndexPath:toVC.currentIndexPath];
+    
     UIView *containerView = [transitionContext containerView];
-    //这里的lastView就是push时候初始化的那个tempView
+    NSArray *views = containerView.subviews;
+    NSLog(@"containerView.subviews.count = %lu",(unsigned long)views.count);
     UIView *tempView = containerView.subviews.lastObject;
+    
     //设置初始状态
-    cell.imageView.hidden = YES;
+    cell.imgView.hidden = YES;
     fromVC.imgView.hidden = YES;
     tempView.hidden = NO;
     [containerView insertSubview:toVC.view atIndex:0];
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:0.55 initialSpringVelocity:1 / 0.55 options:0 animations:^{
-        tempView.frame = [cell.imageView convertRect:cell.imageView.bounds toView:containerView];
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:0.75 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        tempView.frame = [cell.imgView convertRect:cell.imgView.bounds toView:containerView];
+        tempView.layer.cornerRadius = 10;
+        tempView.clipsToBounds = YES;
         fromVC.view.alpha = 0;
     } completion:^(BOOL finished) {
         //由于加入了手势必须判断
@@ -125,7 +137,7 @@
             fromVC.imgView.hidden = NO;
         }else{//手势成功，cell的imageView也要显示出来
             //成功了移除tempView，下一次pop的时候又要创建，然后显示cell的imageView
-            cell.imageView.hidden = NO;
+            cell.imgView.hidden = NO;
             [tempView removeFromSuperview];
         }
     }];
