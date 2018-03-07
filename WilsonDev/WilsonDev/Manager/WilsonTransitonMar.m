@@ -73,10 +73,9 @@
 - (void)presentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
     TransitionCustomVC *fromVC = (TransitionCustomVC *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     AppStroeMainVC *toVC = (AppStroeMainVC *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView *containerView = [transitionContext containerView];
     
     TransitionCustonCell *cell = (TransitionCustonCell *)[fromVC.tableView cellForRowAtIndexPath:fromVC.currentIndexPath];
-    UIView *containerView = [transitionContext containerView];
-
     UIImageView *tempView = [[UIImageView alloc] initWithImage:cell.imgView.image];
     tempView.layer.cornerRadius = 10.f;
     tempView.clipsToBounds = YES;
@@ -110,9 +109,9 @@
 - (void)dismissAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
     AppStroeMainVC *fromVC = (AppStroeMainVC *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     TransitionCustomVC *toVC = (TransitionCustomVC *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    TransitionCustonCell *cell = (TransitionCustonCell *)[toVC.tableView cellForRowAtIndexPath:toVC.currentIndexPath];
-    
     UIView *containerView = [transitionContext containerView];
+    
+    TransitionCustonCell *cell = (TransitionCustonCell *)[toVC.tableView cellForRowAtIndexPath:toVC.currentIndexPath];
     NSArray *views = containerView.subviews;
     NSLog(@"containerView.subviews.count = %lu",(unsigned long)views.count);
     UIView *tempView = containerView.subviews.lastObject;
