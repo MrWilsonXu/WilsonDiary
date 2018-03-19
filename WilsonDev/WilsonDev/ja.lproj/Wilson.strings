@@ -1,0 +1,10 @@
+/* 
+  Wilson.strings
+  WilsonDev
+
+  Created by Wilson on 19/03/2018.
+  Copyright © 2018 Wilson. All rights reserved.
+*/
+"WeakStrong" = "弱い強いリファレンス";
+"SelectLanguage" = "言語を選択する";
+"AlertDes" = "言語を選択してください";

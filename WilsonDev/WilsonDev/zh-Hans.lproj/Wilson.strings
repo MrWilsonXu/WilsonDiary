@@ -1,0 +1,10 @@
+/* 
+  Wilson.strings
+  WilsonDev
+
+  Created by Wilson on 19/03/2018.
+  Copyright © 2018 Wilson. All rights reserved.
+*/
+"WeakStrong" = "强弱引用";
+"SelectLanguage" = "选择语言";
+"AlertDes" = "请选择语言";

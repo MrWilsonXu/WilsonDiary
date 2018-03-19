@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  WilsonDev
+
+  Created by Wilson on 19/03/2018.
+  Copyright © 2018 Wilson. All rights reserved.
+*/
+"GestureHandle" = "ジェスチャー操作";
+"English" = "英語";
+"Chinese" = "中国語";
+"Japanese" = "日本語";
+"SelectLanguage" = "日本語";

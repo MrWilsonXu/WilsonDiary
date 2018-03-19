@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  WilsonDev
+
+  Created by Wilson on 19/03/2018.
+  Copyright © 2018 Wilson. All rights reserved.
+*/
+CFBundleDisplayName = "文件同步";

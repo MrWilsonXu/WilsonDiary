@@ -11,6 +11,7 @@
 #import "DrawRectViewVC.h"
 #import "TransitionMainVC.h"
 #import "WeakStrongVC.h"
+#import "LocalizableVC.h"
 
 #import "SDAutolayout.h"
 
@@ -56,16 +57,19 @@
     NSString *vc2 = NSStringFromClass([DrawRectViewVC class]);
     NSString *vc3 = NSStringFromClass([TransitionMainVC class]);
     NSString *vc4 = NSStringFromClass([WeakStrongVC class]);
+    NSString *vc5 = NSStringFromClass([LocalizableVC class]);
     
-    WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"手势操作" vc:vc1];
+    WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:NSLocalizedString(@"GestureHandle", nil) vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
     WilsonModel *custom = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"转场动画" vc:vc3];
-    WilsonModel *weakStrong = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"weakStrong" vc:vc4];
+    WilsonModel *weakStrong = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:NSLocalizedStringFromTable(@"WeakStrong", @"Wilson", nil) vc:vc4];
+    WilsonModel *localize = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"国际化" vc:vc5];
     
     [self.dataSource addObject:gesture];
     [self.dataSource addObject:drawView];
     [self.dataSource addObject:custom];
     [self.dataSource addObject:weakStrong];
+    [self.dataSource addObject:localize];
     
     [self.tableView reloadData];
 }
