@@ -15,13 +15,14 @@
 
 @property (nonatomic, strong) UILabel *lab;
 
+@property (nonatomic, copy) NSString *currentLanguage;
+
 @end
 
 @implementation LocalizableVC
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidLoad {
@@ -43,21 +44,50 @@
         make.height.mas_offset(20);
         make.centerX.equalTo(self.view);
     }];
-    
-    self.lab.text = NSLocalizedString(@"SelectLanguage", nil);
-    [self logSystemLanguage];
+    [self getOrUpdateSystemLanguage];
+    [self setValueForView];
 }
 
-- (void)logSystemLanguage {
+/**
+ *  View assignment
+ */
+- (void)setValueForView {
+    NSString *labText = [self getStringKey:@"SelectLanguage" tbl:@"Localizable"];
+    self.lab.text = labText;
+    
+    NSBundle *bundle = [self bundlePath];
+    NSString *file = [bundle pathForResource:@"girl" ofType:@"png"];
+    self.imgView.image = [UIImage imageWithContentsOfFile:file];
+    [self.navigationItem.rightBarButtonItem setTitle:[self getStringKey:@"SelectLanguage" tbl:@"Wilson"]];    
+}
+
+- (NSString *)getStringKey:(NSString *)key tbl:(NSString *)tbl {
+    NSBundle *bundle = [self bundlePath];
+    NSString *str = NSLocalizedStringFromTableInBundle(key, tbl, bundle, nil);
+    return str;
+}
+
+- (NSBundle *)bundlePath {
+    NSString * path = [[NSBundle mainBundle]pathForResource:self.currentLanguage ofType:@"lproj"];
+    NSBundle *bundle = [NSBundle bundleWithPath:path];
+    return bundle;
+}
+
+/**
+ *  set/get system language
+ */
+- (void)getOrUpdateSystemLanguage {
     NSArray *lans = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
     NSLog(@"Current Language %@",lans.firstObject);
+    self.currentLanguage = lans.firstObject;
 }
 
 - (void)setSystemLanguage:(NSString *)language {
     if (language.length > 0) {
         NSArray *lans = @[language];
         [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
-        [self logSystemLanguage];
+        [self getOrUpdateSystemLanguage];
+        [self setValueForView];
     }
 }
 
@@ -76,10 +106,12 @@
     UIAlertAction *Japanese = [UIAlertAction actionWithTitle:NSLocalizedString(@"Japanese", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [weakSelf setSystemLanguage:@"ja"];
     }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
     
     [alert addAction:English];
     [alert addAction:Chinese];
     [alert addAction:Japanese];
+    [alert addAction:cancel];
     
     [self presentViewController:alert animated:YES completion:nil];
 }
@@ -88,7 +120,8 @@
 
 - (UIImageView *)imgView {
     if (!_imgView) {
-        self.imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"girl"]];
+        self.imgView = [[UIImageView alloc] init];
+        _imgView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _imgView;
 }
