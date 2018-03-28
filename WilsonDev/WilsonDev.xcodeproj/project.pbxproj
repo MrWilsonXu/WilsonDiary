@@ -22,6 +22,7 @@
 		C8805851205FBF1500528322 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = C8805853205FBF1500528322 /* girl.png */; };
 		C880585A205FC07B00528322 /* LocalizableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C8805859205FC07B00528322 /* LocalizableVC.m */; };
 		C882ACEF204C3B65001BC673 /* WeakStrongVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C882ACEE204C3B65001BC673 /* WeakStrongVC.m */; };
+		C89F2256206B975700F4A401 /* UIAlertView+Wilson.m in Sources */ = {isa = PBXBuildFile; fileRef = C89F2254206B975700F4A401 /* UIAlertView+Wilson.m */; };
 		C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A87636200489A700CF376D /* WilsonMainVC.m */; };
 		C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */; };
 		C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */; };
@@ -87,6 +88,8 @@
 		C880585B205FD76A00528322 /* ja */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ja; path = ja.lproj/girl.png; sourceTree = "<group>"; };
 		C882ACED204C3B65001BC673 /* WeakStrongVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakStrongVC.h; sourceTree = "<group>"; };
 		C882ACEE204C3B65001BC673 /* WeakStrongVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakStrongVC.m; sourceTree = "<group>"; };
+		C89F2254206B975700F4A401 /* UIAlertView+Wilson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Wilson.m"; sourceTree = "<group>"; };
+		C89F2255206B975700F4A401 /* UIAlertView+Wilson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Wilson.h"; sourceTree = "<group>"; };
 		C8A87635200489A700CF376D /* WilsonMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonMainVC.h; sourceTree = "<group>"; };
 		C8A87636200489A700CF376D /* WilsonMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonMainVC.m; sourceTree = "<group>"; };
 		C8B12DAE1FD6459D0000DEB0 /* WilsonDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilsonDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +205,15 @@
 			path = TransitionPurposeVCs;
 			sourceTree = "<group>";
 		};
+		C89F2251206B971E00F4A401 /* Categoty */ = {
+			isa = PBXGroup;
+			children = (
+				C89F2255206B975700F4A401 /* UIAlertView+Wilson.h */,
+				C89F2254206B975700F4A401 /* UIAlertView+Wilson.m */,
+			);
+			path = Categoty;
+			sourceTree = "<group>";
+		};
 		C8B12DA51FD6459D0000DEB0 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +247,7 @@
 				C8C1ED8E2043D29B00F54C43 /* Realm */,
 				C80883261FEB5BB80000D94C /* Container */,
 				C808832D1FEB9FBA0000D94C /* WilsonView */,
+				C89F2251206B971E00F4A401 /* Categoty */,
 				C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */,
 				C8805853205FBF1500528322 /* girl.png */,
 				C8805836205FAA0400528322 /* InfoPlist.strings */,
@@ -525,6 +538,7 @@
 				C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */,
 				C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */,
 				C80AAE16204793ED00807652 /* TransitionMainVC.m in Sources */,
+				C89F2256206B975700F4A401 /* UIAlertView+Wilson.m in Sources */,
 				C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
 			);
