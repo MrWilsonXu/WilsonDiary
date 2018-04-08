@@ -29,6 +29,8 @@
 
 @interface WilsonMainVC ()<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) UILabel *storage;
+
 @property (strong, nonatomic) UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
@@ -49,7 +51,9 @@
         self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
     }
     self.navigationItem.title = @"iOS-Diary";
+    self.tableView.tableHeaderView = self.storage;
     [self.view addSubview:self.tableView];
+    
 }
 
 - (void)customDataSource {
@@ -72,6 +76,10 @@
     [self.dataSource addObject:localize];
     
     [self.tableView reloadData];
+    
+    double space = (double)[CommonTool getFreeDiskspace];
+    NSString *size = [CommonTool sizeFormatted:[NSNumber numberWithDouble:space]];
+    self.storage.text = [NSString stringWithFormat:@"Device available storage: %@",size];
 }
 
 - (WilsonModel *)wilsonModelWithSEL:(SEL)sel title:(NSString *)title vc:(NSString *)vc {
@@ -116,13 +124,22 @@
     model.DidSelect();
 }
 
-#pragma mark - Getter
+#pragma mark - Lazy loading
 
 - (NSMutableArray *)dataSource {
     if (!_dataSource) {
         self.dataSource = [NSMutableArray array];
     }
     return _dataSource;
+}
+
+- (UILabel *)storage {
+    if (!_storage) {
+        self.storage = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 20)];
+        _storage.textColor = [UIColor blackColor];
+        _storage.font = [UIFont systemFontOfSize:12];
+    }
+    return _storage;
 }
 
 - (UITableView *)tableView {
