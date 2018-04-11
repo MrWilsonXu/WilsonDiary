@@ -31,6 +31,8 @@
 
 @property (nonatomic, strong) UILabel *storage;
 
+@property (nonatomic, strong) UILabel *memory;
+
 @property (strong, nonatomic) UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
@@ -46,12 +48,17 @@
 }
 
 - (void)customViews {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     if (@available(iOS 11.0, *)) {
         self.navigationController.navigationBar.prefersLargeTitles = YES;
         self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
     }
     self.navigationItem.title = @"iOS-Diary";
-    self.tableView.tableHeaderView = self.storage;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 40)];
+    view.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:self.storage];
+    [view addSubview:self.memory];
+    self.tableView.tableHeaderView = view;
     [self.view addSubview:self.tableView];
     
 }
@@ -78,8 +85,11 @@
     [self.tableView reloadData];
     
     double space = (double)[CommonTool getFreeDiskspace];
+    double availableMemory = [CommonTool availableMemory];
+    double usedMemory = [CommonTool usedMemory];
     NSString *size = [CommonTool sizeFormatted:[NSNumber numberWithDouble:space]];
     self.storage.text = [NSString stringWithFormat:@"Device available storage: %@",size];
+    self.memory.text = [NSString stringWithFormat:@"Device usedMemory: %.f\nDevice availableMemory: %.f",usedMemory,availableMemory];
 }
 
 - (WilsonModel *)wilsonModelWithSEL:(SEL)sel title:(NSString *)title vc:(NSString *)vc {
@@ -140,6 +150,15 @@
         _storage.font = [UIFont systemFontOfSize:12];
     }
     return _storage;
+}
+
+- (UILabel *)memory {
+    if (!_memory) {
+        self.memory = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.frame), 20)];
+        _memory.textColor = [UIColor blackColor];
+        _memory.font = [UIFont systemFontOfSize:12];
+    }
+    return _memory;
 }
 
 - (UITableView *)tableView {

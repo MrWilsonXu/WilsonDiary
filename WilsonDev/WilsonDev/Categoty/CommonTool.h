@@ -14,5 +14,6 @@
 + (NSString *)sizeFormatted:(NSNumber *)size;
 // Get device storage
 + (uint64_t)getFreeDiskspace;
-
++ (double)availableMemory;
++ (double)usedMemory;
 @end
