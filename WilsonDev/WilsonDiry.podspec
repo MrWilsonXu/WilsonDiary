@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.requires_arc = true
   s.source       = { :git => "https://github.com/MrWilsonXu/WilsonDiary.git", :tag => s.version } 
-  s.source_files  = "WilsonDev/WilsonDev/Container/*.{h,m}"
+  s.source_files  = "WilsonDev/WilsonHeader.h"
 
   # s.public_header_files = "Classes/**/*.h"
 
