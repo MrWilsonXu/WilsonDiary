@@ -107,6 +107,7 @@
 		C8B12DD11FD6459D0000DEB0 /* WilsonDevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WilsonDevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B12DD51FD6459D0000DEB0 /* WilsonDevUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonDevUITests.m; sourceTree = "<group>"; };
 		C8B12DD71FD6459D0000DEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8B7C2E5207F974600FE8ACD /* WilsonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonHeader.h; sourceTree = "<group>"; };
 		CB662AC0EA07579E8DE96BD7 /* Pods-WilsonDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilsonDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev.release.xcconfig"; sourceTree = "<group>"; };
 		D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WilsonDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -248,6 +249,7 @@
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8A87635200489A700CF376D /* WilsonMainVC.h */,
 				C8A87636200489A700CF376D /* WilsonMainVC.m */,
+				C8B7C2E5207F974600FE8ACD /* WilsonHeader.h */,
 				C80AAE182047F92000807652 /* Manager */,
 				C80883261FEB5BB80000D94C /* Container */,
 				C808832D1FEB9FBA0000D94C /* WilsonView */,
