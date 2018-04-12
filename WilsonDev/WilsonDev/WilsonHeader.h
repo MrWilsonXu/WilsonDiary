@@ -9,5 +9,8 @@
 #ifndef WilsonHeader_h
 #define WilsonHeader_h
 
+/**
+ *  Test my podspec
+ */
 
 #endif /* WilsonHeader_h */
