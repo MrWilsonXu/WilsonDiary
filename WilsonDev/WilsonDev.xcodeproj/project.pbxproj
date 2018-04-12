@@ -249,7 +249,6 @@
 				C8A87635200489A700CF376D /* WilsonMainVC.h */,
 				C8A87636200489A700CF376D /* WilsonMainVC.m */,
 				C80AAE182047F92000807652 /* Manager */,
-				C8C1ED8E2043D29B00F54C43 /* Realm */,
 				C80883261FEB5BB80000D94C /* Container */,
 				C808832D1FEB9FBA0000D94C /* WilsonView */,
 				C89F2251206B971E00F4A401 /* Categoty */,
@@ -281,13 +280,6 @@
 				C8B12DD71FD6459D0000DEB0 /* Info.plist */,
 			);
 			path = WilsonDevUITests;
-			sourceTree = "<group>";
-		};
-		C8C1ED8E2043D29B00F54C43 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -741,6 +733,14 @@
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WilsonDev/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+					"\"${PODS_ROOT}/Headers/Public/SDAutoLayout\"",
+				);
 				INFOPLIST_FILE = WilsonDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -760,6 +760,14 @@
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WilsonDev/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+					"\"${PODS_ROOT}/Headers/Public/SDAutoLayout\"",
+				);
 				INFOPLIST_FILE = WilsonDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
