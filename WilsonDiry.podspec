@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "WilsonDiry"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "It's wilson framework"
   s.homepage     = "https://github.com/MrWilsonXu/WilsonDiary"
-  s.license      = "Apache License, Version 2.0"
+  s.license      = "MIT"
   s.authors      = { "Wilson" => "hrxspp@126.com" }
   s.platform     = :ios, "9.0"
   s.requires_arc = true
   s.source       = { :git => "https://github.com/MrWilsonXu/WilsonDiary.git", :tag => s.version } 
-  s.source_files  = "WilsonDev/WilsonHeader.h"
+  s.source_files  = "WilsonDev/WilsonDev/WilsonCategory/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
