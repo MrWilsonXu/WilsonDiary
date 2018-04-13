@@ -30,6 +30,7 @@
 		C8B12DC11FD6459D0000DEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DC01FD6459D0000DEB0 /* main.m */; };
 		C8B12DCB1FD6459D0000DEB0 /* WilsonDevTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DCA1FD6459D0000DEB0 /* WilsonDevTests.m */; };
 		C8B12DD61FD6459D0000DEB0 /* WilsonDevUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DD51FD6459D0000DEB0 /* WilsonDevUITests.m */; };
+		C8B7C2E920803FA100FE8ACD /* YSDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */; };
 		E50AC0BA4DF7CF8CC74BE2B8 /* libPods-WilsonDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +108,8 @@
 		C8B12DD11FD6459D0000DEB0 /* WilsonDevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WilsonDevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B12DD51FD6459D0000DEB0 /* WilsonDevUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonDevUITests.m; sourceTree = "<group>"; };
 		C8B12DD71FD6459D0000DEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8B7C2E5207F974600FE8ACD /* WilsonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonHeader.h; sourceTree = "<group>"; };
+		C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDateTool.m; sourceTree = "<group>"; };
+		C8B7C2E820803F9B00FE8ACD /* YSDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDateTool.h; sourceTree = "<group>"; };
 		CB662AC0EA07579E8DE96BD7 /* Pods-WilsonDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilsonDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev.release.xcconfig"; sourceTree = "<group>"; };
 		D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WilsonDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -249,7 +251,7 @@
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8A87635200489A700CF376D /* WilsonMainVC.h */,
 				C8A87636200489A700CF376D /* WilsonMainVC.m */,
-				C8B7C2E5207F974600FE8ACD /* WilsonHeader.h */,
+				C8B7C2E620803F9B00FE8ACD /* WilsonCategory */,
 				C80AAE182047F92000807652 /* Manager */,
 				C80883261FEB5BB80000D94C /* Container */,
 				C808832D1FEB9FBA0000D94C /* WilsonView */,
@@ -282,6 +284,15 @@
 				C8B12DD71FD6459D0000DEB0 /* Info.plist */,
 			);
 			path = WilsonDevUITests;
+			sourceTree = "<group>";
+		};
+		C8B7C2E620803F9B00FE8ACD /* WilsonCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C8B7C2E820803F9B00FE8ACD /* YSDateTool.h */,
+				C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */,
+			);
+			path = WilsonCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +552,7 @@
 				C89F2256206B975700F4A401 /* UIAlertView+Wilson.m in Sources */,
 				C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
+				C8B7C2E920803FA100FE8ACD /* YSDateTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
