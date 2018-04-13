@@ -10,10 +10,7 @@
 
 @implementation YSDateTool
 
-/**
- **判断 日期是否是本周
- **/
-
+// 判断日期是否是本周
 + (BOOL)isThisWeek:(NSString *)dateString{
     // 需要设置三个参数
     NSDate *start;
@@ -127,7 +124,7 @@
     return tempstr;
 }
 
-//世界时间转换为本地时间
+// 世界时间转换为本地时间
 - (NSDate *)worldDateToLocalDate:(NSDate *)date {
     //获取本地时区(中国时区)
     NSTimeZone* localTimeZone = [NSTimeZone localTimeZone];
@@ -141,23 +138,19 @@
     return localDate;
 }
 
-
 /**
- 将时间戳转换成 时间字符串
- 
- @param timestamp 时间戳
- @param format YYYY-MM-dd hh:mm:ss
- @return 时间字符串
+ *  将时间戳转换成 时间字符串
+ *  @param timestamp 时间戳
+ *  @param format YYYY-MM-dd hh:mm:ss
+ *  @return 时间字符串
  */
-+(NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format{
++ (NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:format]; // （@"YYYY-MM-dd hh:mm:ss"）----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
-    
-//    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
-//    [formatter setTimeZone:timeZone];
+    // @"YYYY-MM-dd hh:mm:ss" 设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    [formatter setDateFormat:format];
     
     NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timestamp];
     NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
@@ -165,26 +158,20 @@
     return confromTimespStr;
 }
 
-
 /**
- 将某个时间转化成 时间戳
-
- @param formatTime 时间字符串
- @param format 时间格式
- @return 时间戳
+ *  将某个时间转化成 时间戳
+ *  @param formatTime 时间字符串
+ *  @param format 时间格式
+ *  @return 时间戳
  */
-+(NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format{
++ (NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:format]; //(@"YYYY-MM-dd hh:mm:ss") ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    [formatter setDateFormat:format];
     
-//    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
-//    [formatter setTimeZone:timeZone];
-    
-    NSDate* date = [formatter dateFromString:formatTime]; //------------将字符串按formatter转成nsdate
-    //时间转时间戳的方法:
+    NSDate* date = [formatter dateFromString:formatTime];
     NSInteger timeSp = [[NSNumber numberWithDouble:[date timeIntervalSince1970]] integerValue];
     
     return timeSp;

@@ -68,7 +68,7 @@
 }
 
 - (NSBundle *)bundlePath {
-    NSString * path = [[NSBundle mainBundle]pathForResource:self.currentLanguage ofType:@"lproj"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:self.currentLanguage ofType:@"lproj"];
     NSBundle *bundle = [NSBundle bundleWithPath:path];
     return bundle;
 }

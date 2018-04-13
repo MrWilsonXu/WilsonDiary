@@ -38,21 +38,19 @@
 + (NSString *)stringOfEEEEHHmm;
 
 /**
- 将时间戳转换成 时间字符串
- 
- @param timestamp 时间戳
- @param format YYYY-MM-dd hh:mm:ss
- @return 时间字符串
+ *  将时间戳转换成 时间字符串
+ *  @param timestamp 时间戳
+ *  @param format YYYY-MM-dd hh:mm:ss
+ *  @return 时间字符串
  */
-+(NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format;
++ (NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format;
 
 /**
- 将某个时间转化成 时间戳
- 
- @param formatTime 时间字符串
- @param format 时间格式
- @return 时间戳
+ *  将某个时间转化成 时间戳
+ *  @param formatTime 时间字符串
+ *  @param format 时间格式
+ *  @return 时间戳
  */
-+(NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format;
++ (NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format;
 
 @end
