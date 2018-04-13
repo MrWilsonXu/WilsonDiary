@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name         = "WilsonDiry"
-  s.version      = "0.0.4"
+  s.name         = "WilsonDiary"
+  s.version      = "0.0.5"
   s.summary      = "It's wilson framework"
   s.homepage     = "https://github.com/MrWilsonXu/WilsonDiary"
   s.license      = "MIT"
