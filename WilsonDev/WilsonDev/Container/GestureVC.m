@@ -7,8 +7,11 @@
 //
 
 #import "GestureVC.h"
+#import "SDAutolayout.h"
 
 @interface GestureVC ()
+
+@property (nonatomic, strong) UIScrollView *scrollview;
 
 @end
 
@@ -23,6 +26,30 @@
 - (void)customSubviews {
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.scrollview];
+    self.scrollview.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
+
+    CGFloat height = CGRectGetHeight(self.view.frame) / 5.0;
+    UIView *lastView = self.scrollview;
+    
+    for (int i = 0; i < 5; i++) {
+        NSInteger random = arc4random() % 255;
+        
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor colorWithRed:random / 255.0 green:200/255.0 blue:200/255.0 alpha:1];
+        [self.scrollview addSubview:view];
+        
+        view.sd_layout
+        .topSpaceToView(lastView, 0)
+        .leftSpaceToView(self.scrollview, 0)
+        .rightSpaceToView(self.scrollview, 0)
+        .heightIs(height);
+        
+        lastView = view;
+    }
+    
+    [self.scrollview setupAutoContentSizeWithBottomView:lastView bottomMargin:0];
+    
 }
 
 #pragma mark - TapGesture exclusive
@@ -63,6 +90,12 @@
     NSLog(@"tap2 action");
 }
 
+- (UIScrollView *)scrollview {
+    if (!_scrollview) {
+        self.scrollview = [[UIScrollView alloc] init];
+    }
+    return _scrollview;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
