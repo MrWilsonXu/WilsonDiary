@@ -16,6 +16,11 @@
 		C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC0392048F4B70041F894 /* TransitionCustomVC.m */; };
 		C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */; };
 		C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */; };
+		C86490E020B01F6C0077FDC2 /* NGSFileDownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C86490DB20B01F6C0077FDC2 /* NGSFileDownloadView.m */; };
+		C86490E120B01F6C0077FDC2 /* NGSQLPreviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C86490DE20B01F6C0077FDC2 /* NGSQLPreviewVC.m */; };
+		C86490E320B01F740077FDC2 /* NGSSessionTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C86490E220B01F740077FDC2 /* NGSSessionTaskManager.m */; };
+		C86490E920B021B80077FDC2 /* M13ProgressViewBorderedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C86490E720B021B80077FDC2 /* M13ProgressViewBorderedBar.m */; };
+		C86490EA20B021B80077FDC2 /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C86490E820B021B80077FDC2 /* M13ProgressView.m */; };
 		C8805834205FAA0400528322 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8805836205FAA0400528322 /* InfoPlist.strings */; };
 		C880583C205FB56600528322 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C880583E205FB56600528322 /* Localizable.strings */; };
 		C8805843205FB72700528322 /* Wilson.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8805845205FB72700528322 /* Wilson.strings */; };
@@ -74,6 +79,16 @@
 		C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionCustonCell.m; sourceTree = "<group>"; };
 		C85EC03E20494ABB0041F894 /* AppStroeMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStroeMainVC.h; sourceTree = "<group>"; };
 		C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStroeMainVC.m; sourceTree = "<group>"; };
+		C86490DB20B01F6C0077FDC2 /* NGSFileDownloadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSFileDownloadView.m; sourceTree = "<group>"; };
+		C86490DC20B01F6C0077FDC2 /* NGSQLPreviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSQLPreviewVC.h; sourceTree = "<group>"; };
+		C86490DD20B01F6C0077FDC2 /* NGSFileDownloadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSFileDownloadView.h; sourceTree = "<group>"; };
+		C86490DE20B01F6C0077FDC2 /* NGSQLPreviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSQLPreviewVC.m; sourceTree = "<group>"; };
+		C86490DF20B01F6C0077FDC2 /* NGSSessionTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSSessionTaskManager.h; sourceTree = "<group>"; };
+		C86490E220B01F740077FDC2 /* NGSSessionTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSSessionTaskManager.m; sourceTree = "<group>"; };
+		C86490E520B021B80077FDC2 /* M13ProgressViewBorderedBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13ProgressViewBorderedBar.h; sourceTree = "<group>"; };
+		C86490E620B021B80077FDC2 /* M13ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13ProgressView.h; sourceTree = "<group>"; };
+		C86490E720B021B80077FDC2 /* M13ProgressViewBorderedBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ProgressViewBorderedBar.m; sourceTree = "<group>"; };
+		C86490E820B021B80077FDC2 /* M13ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ProgressView.m; sourceTree = "<group>"; };
 		C8805835205FAA0400528322 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8805837205FAA0F00528322 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C8805839205FB38000528322 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -211,6 +226,30 @@
 			path = TransitionPurposeVCs;
 			sourceTree = "<group>";
 		};
+		C86490DA20B01F5B0077FDC2 /* FilePreview */ = {
+			isa = PBXGroup;
+			children = (
+				C86490DD20B01F6C0077FDC2 /* NGSFileDownloadView.h */,
+				C86490DB20B01F6C0077FDC2 /* NGSFileDownloadView.m */,
+				C86490DC20B01F6C0077FDC2 /* NGSQLPreviewVC.h */,
+				C86490DE20B01F6C0077FDC2 /* NGSQLPreviewVC.m */,
+				C86490DF20B01F6C0077FDC2 /* NGSSessionTaskManager.h */,
+				C86490E220B01F740077FDC2 /* NGSSessionTaskManager.m */,
+			);
+			path = FilePreview;
+			sourceTree = "<group>";
+		};
+		C86490E420B021B80077FDC2 /* M13ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				C86490E520B021B80077FDC2 /* M13ProgressViewBorderedBar.h */,
+				C86490E620B021B80077FDC2 /* M13ProgressView.h */,
+				C86490E720B021B80077FDC2 /* M13ProgressViewBorderedBar.m */,
+				C86490E820B021B80077FDC2 /* M13ProgressView.m */,
+			);
+			path = M13ProgressView;
+			sourceTree = "<group>";
+		};
 		C89F2251206B971E00F4A401 /* Categoty */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +290,8 @@
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8A87635200489A700CF376D /* WilsonMainVC.h */,
 				C8A87636200489A700CF376D /* WilsonMainVC.m */,
+				C86490E420B021B80077FDC2 /* M13ProgressView */,
+				C86490DA20B01F5B0077FDC2 /* FilePreview */,
 				C8B7C2E620803F9B00FE8ACD /* WilsonCategory */,
 				C80AAE182047F92000807652 /* Manager */,
 				C80883261FEB5BB80000D94C /* Container */,
@@ -538,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */,
+				C86490E120B01F6C0077FDC2 /* NGSQLPreviewVC.m in Sources */,
 				C8963E4E2079C30F00614775 /* CommonTool.m in Sources */,
 				C880585A205FC07B00528322 /* LocalizableVC.m in Sources */,
 				C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */,
@@ -545,14 +587,18 @@
 				C882ACEF204C3B65001BC673 /* WeakStrongVC.m in Sources */,
 				C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
+				C86490E020B01F6C0077FDC2 /* NGSFileDownloadView.m in Sources */,
 				C80883291FEB5BB80000D94C /* GestureVC.m in Sources */,
 				C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */,
+				C86490E920B021B80077FDC2 /* M13ProgressViewBorderedBar.m in Sources */,
 				C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */,
+				C86490EA20B021B80077FDC2 /* M13ProgressView.m in Sources */,
 				C80AAE16204793ED00807652 /* TransitionMainVC.m in Sources */,
 				C89F2256206B975700F4A401 /* UIAlertView+Wilson.m in Sources */,
 				C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
 				C8B7C2E920803FA100FE8ACD /* YSDateTool.m in Sources */,
+				C86490E320B01F740077FDC2 /* NGSSessionTaskManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
