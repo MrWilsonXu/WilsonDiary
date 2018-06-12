@@ -47,6 +47,7 @@
 }
 
 - (void)customViews {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.downloadView];
     self.downloadView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
@@ -154,9 +155,10 @@
     return [NSString stringWithFormat:@"NGSPDFFolder/kkk"];
 }
 
+// 在指定目录下创建 "head" 文件夹
 - (NSString *)fileRootPath {
     NSString * docsdir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *dataFilePath = [docsdir stringByAppendingPathComponent:[self userAcUuidPath]]; // 在指定目录下创建 "head" 文件夹
+    NSString *dataFilePath = [docsdir stringByAppendingPathComponent:[self userAcUuidPath]];
     return dataFilePath;
 }
 
@@ -170,7 +172,6 @@
     // fileExistsAtPath 判断一个文件或目录是否有效，isDirectory判断是否一个目录
     BOOL existed = [fileManager fileExistsAtPath:dataFilePath isDirectory:&isDir];
     if (!(isDir == YES && existed == YES) ) {
-        // 在 Document 目录下创建一个 head 目录
         [fileManager createDirectoryAtPath:dataFilePath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     

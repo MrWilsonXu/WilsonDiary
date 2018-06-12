@@ -37,7 +37,7 @@
     [self sd_addSubviews:@[self.fileTypeLab, self.fileDesLab, self.downloadDesLab, self.progressView, self.handleBtn]];
     
     self.fileTypeLab.sd_layout
-    .topSpaceToView(self, 94)
+    .topSpaceToView(self, 44)
     .minWidthIs(50)
     .maxWidthIs(200)
     .heightEqualToWidth()
@@ -150,7 +150,7 @@
     if (!_handleBtn) {
         self.handleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_handleBtn setBackgroundColor:[UIColor yellowColor]];
-        [_handleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_handleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _handleBtn.titleLabel.font = [UIFont systemFontOfSize:17];
         [_handleBtn setTitle:@"开始下载" forState:UIControlStateNormal];
         _handleBtn.layer.cornerRadius = 5.f;
