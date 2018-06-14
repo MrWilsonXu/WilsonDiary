@@ -1,0 +1,6 @@
+module Pods_WilsonDev {
+  umbrella header "Pods-WilsonDev-umbrella.h"
+
+  export *
+  module * { export * }
+}

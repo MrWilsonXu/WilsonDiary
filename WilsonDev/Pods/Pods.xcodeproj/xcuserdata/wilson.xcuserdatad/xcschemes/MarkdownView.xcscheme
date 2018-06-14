@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CDDE39E1EBCAA58D40BCE1FC77714B91"
-               BlueprintName = "Pods-WilsonDevUITests"
+               BlueprintIdentifier = "0F640511702F79148F6DB177C0DBF1AA"
+               BlueprintName = "MarkdownView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-WilsonDevUITests.a">
+               BuildableName = "libMarkdownView.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
