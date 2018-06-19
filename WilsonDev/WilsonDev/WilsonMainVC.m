@@ -13,6 +13,7 @@
 #import "WeakStrongVC.h"
 #import "LocalizableVC.h"
 #import "NGSQLPreviewVC.h"
+#import "MarkdownVC.h"
 
 #import "SDAutolayout.h"
 
@@ -71,6 +72,7 @@
     NSString *vc4 = NSStringFromClass([WeakStrongVC class]);
     NSString *vc5 = NSStringFromClass([LocalizableVC class]);
     NSString *vc6 = NSStringFromClass([NGSQLPreviewVC class]);
+    NSString *vc7 = NSStringFromClass([MarkdownVC class]);
     
     WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:NSLocalizedString(@"GestureHandle", nil) vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
@@ -78,6 +80,7 @@
     WilsonModel *weakStrong = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:NSLocalizedStringFromTable(@"WeakStrong", @"Wilson", nil) vc:vc4];
     WilsonModel *localize = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"国际化" vc:vc5];
     WilsonModel *preview = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"文件预览" vc:vc6];
+    WilsonModel *markdown = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"Markdown" vc:vc7];
     
     [self.dataSource addObject:gesture];
     [self.dataSource addObject:drawView];
@@ -85,6 +88,7 @@
     [self.dataSource addObject:weakStrong];
     [self.dataSource addObject:localize];
     [self.dataSource addObject:preview];
+    [self.dataSource addObject:markdown];
     
     [self.tableView reloadData];
     

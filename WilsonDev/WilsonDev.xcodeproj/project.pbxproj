@@ -13,6 +13,7 @@
 		C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832F1FEB9FD60000D94C /* WilsonDrawView.m */; };
 		C80AAE16204793ED00807652 /* TransitionMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE15204793ED00807652 /* TransitionMainVC.m */; };
 		C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */; };
+		C80DA9A620D3A15D00A013FB /* MarkdownVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DA9A520D3A15D00A013FB /* MarkdownVC.m */; };
 		C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC0392048F4B70041F894 /* TransitionCustomVC.m */; };
 		C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */; };
 		C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */; };
@@ -36,6 +37,8 @@
 		C8B12DCB1FD6459D0000DEB0 /* WilsonDevTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DCA1FD6459D0000DEB0 /* WilsonDevTests.m */; };
 		C8B12DD61FD6459D0000DEB0 /* WilsonDevUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DD51FD6459D0000DEB0 /* WilsonDevUITests.m */; };
 		C8B7C2E920803FA100FE8ACD /* YSDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */; };
+		C8B9B0AF20D274F9004E95D6 /* WilsonMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9B0AE20D274F9004E95D6 /* WilsonMarkdownView.swift */; };
+		C8B9B0B120D27774004E95D6 /* sample.md in Resources */ = {isa = PBXBuildFile; fileRef = C8B9B0B020D27774004E95D6 /* sample.md */; };
 		E50AC0BA4DF7CF8CC74BE2B8 /* libPods-WilsonDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,8 @@
 		C80AAE172047DA4D00807652 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C80AAE1C2047FE5700807652 /* WilsonTransitonMar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonTransitonMar.h; sourceTree = "<group>"; };
 		C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonTransitonMar.m; sourceTree = "<group>"; };
+		C80DA9A420D3A15D00A013FB /* MarkdownVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdownVC.h; sourceTree = "<group>"; };
+		C80DA9A520D3A15D00A013FB /* MarkdownVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkdownVC.m; sourceTree = "<group>"; };
 		C85EC0382048F4B70041F894 /* TransitionCustomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionCustomVC.h; sourceTree = "<group>"; };
 		C85EC0392048F4B70041F894 /* TransitionCustomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionCustomVC.m; sourceTree = "<group>"; };
 		C85EC03B2048F4DF0041F894 /* TransitionCustonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionCustonCell.h; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 		C89F2255206B975700F4A401 /* UIAlertView+Wilson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Wilson.h"; sourceTree = "<group>"; };
 		C8A87635200489A700CF376D /* WilsonMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WilsonMainVC.h; sourceTree = "<group>"; };
 		C8A87636200489A700CF376D /* WilsonMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonMainVC.m; sourceTree = "<group>"; };
+		C8B0CD4E20D266F900CFED44 /* WilsonDev-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WilsonDev-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8B12DAE1FD6459D0000DEB0 /* WilsonDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilsonDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B12DB11FD6459D0000DEB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 		C8B12DD71FD6459D0000DEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDateTool.m; sourceTree = "<group>"; };
 		C8B7C2E820803F9B00FE8ACD /* YSDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDateTool.h; sourceTree = "<group>"; };
+		C8B9B0AE20D274F9004E95D6 /* WilsonMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WilsonMarkdownView.swift; sourceTree = "<group>"; };
+		C8B9B0B020D27774004E95D6 /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = sample.md; sourceTree = "<group>"; };
 		CB662AC0EA07579E8DE96BD7 /* Pods-WilsonDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilsonDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev.release.xcconfig"; sourceTree = "<group>"; };
 		D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WilsonDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,6 +200,8 @@
 				C85EC0392048F4B70041F894 /* TransitionCustomVC.m */,
 				C8805858205FC07B00528322 /* LocalizableVC.h */,
 				C8805859205FC07B00528322 /* LocalizableVC.m */,
+				C80DA9A420D3A15D00A013FB /* MarkdownVC.h */,
+				C80DA9A520D3A15D00A013FB /* MarkdownVC.m */,
 				C80AAE1F2048069800807652 /* TransitionPurposeVCs */,
 			);
 			path = Container;
@@ -264,6 +274,7 @@
 		C8B12DA51FD6459D0000DEB0 = {
 			isa = PBXGroup;
 			children = (
+				C8B9B0B020D27774004E95D6 /* sample.md */,
 				C8B12DB01FD6459D0000DEB0 /* WilsonDev */,
 				C8B12DC91FD6459D0000DEB0 /* WilsonDevTests */,
 				C8B12DD41FD6459D0000DEB0 /* WilsonDevUITests */,
@@ -305,6 +316,8 @@
 				C8B12DBF1FD6459D0000DEB0 /* Info.plist */,
 				C8B12DC01FD6459D0000DEB0 /* main.m */,
 				C80AAE172047DA4D00807652 /* PrefixHeader.pch */,
+				C8B9B0AE20D274F9004E95D6 /* WilsonMarkdownView.swift */,
+				C8B0CD4E20D266F900CFED44 /* WilsonDev-Bridging-Header.h */,
 			);
 			path = WilsonDev;
 			sourceTree = "<group>";
@@ -406,6 +419,7 @@
 				TargetAttributes = {
 					C8B12DAD1FD6459D0000DEB0 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 					C8B12DC51FD6459D0000DEB0 = {
@@ -449,6 +463,7 @@
 			files = (
 				C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */,
 				C8805851205FBF1500528322 /* girl.png in Resources */,
+				C8B9B0B120D27774004E95D6 /* sample.md in Resources */,
 				C880583C205FB56600528322 /* Localizable.strings in Resources */,
 				C8805843205FB72700528322 /* Wilson.strings in Resources */,
 				C8805834205FAA0400528322 /* InfoPlist.strings in Resources */,
@@ -533,9 +548,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80DA9A620D3A15D00A013FB /* MarkdownVC.m in Sources */,
 				C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */,
 				C86490E120B01F6C0077FDC2 /* NGSQLPreviewVC.m in Sources */,
 				C8963E4E2079C30F00614775 /* CommonTool.m in Sources */,
+				C8B9B0AF20D274F9004E95D6 /* WilsonMarkdownView.swift in Sources */,
 				C880585A205FC07B00528322 /* LocalizableVC.m in Sources */,
 				C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */,
 				C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */,
@@ -748,8 +765,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2W77NDA9H2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AB3C5X5366;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WilsonDev/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -763,8 +782,12 @@
 				INFOPLIST_FILE = WilsonDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ForeverMamba.WilsonDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WilsonDev/WilsonDev-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -775,8 +798,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2W77NDA9H2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AB3C5X5366;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WilsonDev/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -790,8 +815,11 @@
 				INFOPLIST_FILE = WilsonDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ForeverMamba.WilsonDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WilsonDev/WilsonDev-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -799,6 +827,7 @@
 		C8B12DDE1FD6459D0000DEB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
@@ -814,6 +843,7 @@
 		C8B12DDF1FD6459D0000DEB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
@@ -830,6 +860,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A87FD9F459C72126206E8F48 /* Pods-WilsonDevUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
 				INFOPLIST_FILE = WilsonDevUITests/Info.plist;
@@ -845,6 +876,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0E7152230E1FEC340E7E89C /* Pods-WilsonDevUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W77NDA9H2;
 				INFOPLIST_FILE = WilsonDevUITests/Info.plist;

@@ -8,7 +8,7 @@ import WebKit
  */
 open class MarkdownView: UIView {
 
-  private var webView: WKWebView?
+  public var webView: WKWebView?
   
   fileprivate var intrinsicContentHeight: CGFloat? {
     didSet {
@@ -78,6 +78,8 @@ open class MarkdownView: UIView {
       wv.scrollView.isScrollEnabled = self.isScrollEnabled
       wv.translatesAutoresizingMaskIntoConstraints = false
       wv.navigationDelegate = self
+      wv.allowsBackForwardNavigationGestures = true
+      
       addSubview(wv)
       wv.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
       wv.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -114,7 +116,7 @@ extension MarkdownView: WKNavigationDelegate {
   }
 
   public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-
+    
     switch navigationAction.navigationType {
     case .linkActivated:
       if let onTouchLink = onTouchLink, onTouchLink(navigationAction.request) {
@@ -127,5 +129,7 @@ extension MarkdownView: WKNavigationDelegate {
     }
 
   }
+    
+    
 
 }
