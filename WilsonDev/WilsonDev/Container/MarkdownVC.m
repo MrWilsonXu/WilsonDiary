@@ -33,7 +33,7 @@
     NSString *htmlStr = [self getHTMLString:htmlString];
           
     [self.view addSubview:self.webview];
-    [self.webview loadHTMLString:htmlString baseURL:nil];
+    [self.webview loadHTMLString:htmlStr baseURL:nil];
 
 }
 
