@@ -8,19 +8,19 @@
 
 import UIKit
 import WebKit
-import MarkdownView
 
 class WilsonMarkdownView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadMarkdownView(view: self)
+        
+        /*loadMarkdownView(view: self)*/
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    /*
     func loadMarkdownView(view : UIView) ->() {
         let mdView = MarkdownView()
         view.addSubview(mdView);
@@ -42,6 +42,6 @@ class WilsonMarkdownView: UIView {
             self.setNeedsLayout()
         }
     
-    }
+    }*/
 
 }

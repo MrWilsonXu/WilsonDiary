@@ -39,6 +39,8 @@
 		C8B7C2E920803FA100FE8ACD /* YSDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */; };
 		C8B9B0AF20D274F9004E95D6 /* WilsonMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9B0AE20D274F9004E95D6 /* WilsonMarkdownView.swift */; };
 		C8B9B0B120D27774004E95D6 /* sample.md in Resources */ = {isa = PBXBuildFile; fileRef = C8B9B0B020D27774004E95D6 /* sample.md */; };
+		C8D11E3720DB809600714214 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D11E3620DB809600714214 /* WebKit.framework */; };
+		C8D11E7D20DC92AE00714214 /* SPLatex.html in Resources */ = {isa = PBXBuildFile; fileRef = C8D11E7C20DC92AE00714214 /* SPLatex.html */; };
 		E50AC0BA4DF7CF8CC74BE2B8 /* libPods-WilsonDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,8 @@
 		C8B7C2E820803F9B00FE8ACD /* YSDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDateTool.h; sourceTree = "<group>"; };
 		C8B9B0AE20D274F9004E95D6 /* WilsonMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WilsonMarkdownView.swift; sourceTree = "<group>"; };
 		C8B9B0B020D27774004E95D6 /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = sample.md; sourceTree = "<group>"; };
+		C8D11E3620DB809600714214 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C8D11E7C20DC92AE00714214 /* SPLatex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SPLatex.html; sourceTree = "<group>"; };
 		CB662AC0EA07579E8DE96BD7 /* Pods-WilsonDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilsonDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev.release.xcconfig"; sourceTree = "<group>"; };
 		D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WilsonDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D11E3720DB809600714214 /* WebKit.framework in Frameworks */,
 				E50AC0BA4DF7CF8CC74BE2B8 /* libPods-WilsonDev.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +172,7 @@
 		38C8D2BA6AF0A805269F1243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8D11E3620DB809600714214 /* WebKit.framework */,
 				D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */,
 				19BAE3FEB45576C39EA43E7A /* libPods-WilsonDevTests.a */,
 				B79CC9C9B15EFE0A12973F25 /* libPods-WilsonDevUITests.a */,
@@ -202,6 +208,7 @@
 				C8805859205FC07B00528322 /* LocalizableVC.m */,
 				C80DA9A420D3A15D00A013FB /* MarkdownVC.h */,
 				C80DA9A520D3A15D00A013FB /* MarkdownVC.m */,
+				C8D11E7C20DC92AE00714214 /* SPLatex.html */,
 				C80AAE1F2048069800807652 /* TransitionPurposeVCs */,
 			);
 			path = Container;
@@ -360,7 +367,6 @@
 				C8B12DAA1FD6459D0000DEB0 /* Sources */,
 				C8B12DAB1FD6459D0000DEB0 /* Frameworks */,
 				C8B12DAC1FD6459D0000DEB0 /* Resources */,
-				C92E42FB449923DFD645A4FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -463,6 +469,7 @@
 			files = (
 				C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */,
 				C8805851205FBF1500528322 /* girl.png in Resources */,
+				C8D11E7D20DC92AE00714214 /* SPLatex.html in Resources */,
 				C8B9B0B120D27774004E95D6 /* sample.md in Resources */,
 				C880583C205FB56600528322 /* Localizable.strings in Resources */,
 				C8805843205FB72700528322 /* Wilson.strings in Resources */,
@@ -503,24 +510,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C92E42FB449923DFD645A4FD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/MarkdownView/MarkdownView.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MarkdownView.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F09F32077B8B12B45C7CF8CC /* [CP] Check Pods Manifest.lock */ = {

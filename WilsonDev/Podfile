@@ -8,7 +8,7 @@ target 'WilsonDev' do
   # Pods for WilsonDev
 
   inherit! :search_paths
-  pod "MarkdownView"
+  pod "MMMarkdown", '~> 0.5.5'
   pod 'SDAutoLayout', '~> 2.2.0'
   pod 'Masonry', '~> 1.1.0'
   pod 'AFNetworking', '~> 3.1.0'
