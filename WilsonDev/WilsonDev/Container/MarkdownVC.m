@@ -23,8 +23,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"md"];
-    NSString *markdown = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSString *markdownPath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"md"];
+    NSString *markdown = [NSString stringWithContentsOfFile:markdownPath encoding:NSUTF8StringEncoding error:nil];
+    
+    NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"Test" ofType:@"html"];
+    NSString *htmlTest = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
     
     //注意：使用MMMarkdown转义之后会自动填充\n,在需要的情况下，可以手动删除
     NSError  *error;
@@ -33,7 +36,7 @@
     NSString *htmlStr = [self getHTMLString:htmlString];
           
     [self.view addSubview:self.webview];
-    [self.webview loadHTMLString:htmlString baseURL:nil];
+    [self.webview loadHTMLString:htmlTest baseURL:nil];
 
 }
 

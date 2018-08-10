@@ -41,6 +41,7 @@
 		C8B9B0B120D27774004E95D6 /* sample.md in Resources */ = {isa = PBXBuildFile; fileRef = C8B9B0B020D27774004E95D6 /* sample.md */; };
 		C8D11E3720DB809600714214 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D11E3620DB809600714214 /* WebKit.framework */; };
 		C8D11E7D20DC92AE00714214 /* SPLatex.html in Resources */ = {isa = PBXBuildFile; fileRef = C8D11E7C20DC92AE00714214 /* SPLatex.html */; };
+		C8DF247020E5D47200BF0410 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = C8DF246F20E5D47200BF0410 /* Test.html */; };
 		E50AC0BA4DF7CF8CC74BE2B8 /* libPods-WilsonDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		C8B9B0B020D27774004E95D6 /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = sample.md; sourceTree = "<group>"; };
 		C8D11E3620DB809600714214 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C8D11E7C20DC92AE00714214 /* SPLatex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SPLatex.html; sourceTree = "<group>"; };
+		C8DF246F20E5D47200BF0410 /* Test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
 		CB662AC0EA07579E8DE96BD7 /* Pods-WilsonDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilsonDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev.release.xcconfig"; sourceTree = "<group>"; };
 		D87A9BBD07F60A4C5027F831 /* libPods-WilsonDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WilsonDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,6 +211,7 @@
 				C80DA9A420D3A15D00A013FB /* MarkdownVC.h */,
 				C80DA9A520D3A15D00A013FB /* MarkdownVC.m */,
 				C8D11E7C20DC92AE00714214 /* SPLatex.html */,
+				C8DF246F20E5D47200BF0410 /* Test.html */,
 				C80AAE1F2048069800807652 /* TransitionPurposeVCs */,
 			);
 			path = Container;
@@ -471,6 +474,7 @@
 				C8805851205FBF1500528322 /* girl.png in Resources */,
 				C8D11E7D20DC92AE00714214 /* SPLatex.html in Resources */,
 				C8B9B0B120D27774004E95D6 /* sample.md in Resources */,
+				C8DF247020E5D47200BF0410 /* Test.html in Resources */,
 				C880583C205FB56600528322 /* Localizable.strings in Resources */,
 				C8805843205FB72700528322 /* Wilson.strings in Resources */,
 				C8805834205FAA0400528322 /* InfoPlist.strings in Resources */,
