@@ -47,6 +47,7 @@
     [super viewDidLoad];
     [self customViews];
     [self customDataSource];
+    [self testCirculeReference];
 }
 
 - (void)customViews {
@@ -63,6 +64,13 @@
     self.tableView.tableHeaderView = view;
     [self.view addSubview:self.tableView];
     
+}
+
+- (void)testCirculeReference {
+    NSMutableArray *a = [NSMutableArray array];
+    NSMutableArray *b = [NSMutableArray array];
+    [a addObject:b];
+    [b addObject:a];
 }
 
 - (void)customDataSource {
