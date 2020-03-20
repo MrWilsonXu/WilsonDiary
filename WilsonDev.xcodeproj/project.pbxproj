@@ -38,7 +38,6 @@
 		C8B12DD61FD6459D0000DEB0 /* WilsonDevUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B12DD51FD6459D0000DEB0 /* WilsonDevUITests.m */; };
 		C8B7C2E920803FA100FE8ACD /* YSDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */; };
 		C8B9B0AF20D274F9004E95D6 /* WilsonMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9B0AE20D274F9004E95D6 /* WilsonMarkdownView.swift */; };
-		C8B9B0B120D27774004E95D6 /* sample.md in Resources */ = {isa = PBXBuildFile; fileRef = C8B9B0B020D27774004E95D6 /* sample.md */; };
 		C8D11E3720DB809600714214 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D11E3620DB809600714214 /* WebKit.framework */; };
 		C8D11E7D20DC92AE00714214 /* SPLatex.html in Resources */ = {isa = PBXBuildFile; fileRef = C8D11E7C20DC92AE00714214 /* SPLatex.html */; };
 		C8DF247020E5D47200BF0410 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = C8DF246F20E5D47200BF0410 /* Test.html */; };
@@ -135,7 +134,6 @@
 		C8B7C2E720803F9B00FE8ACD /* YSDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDateTool.m; sourceTree = "<group>"; };
 		C8B7C2E820803F9B00FE8ACD /* YSDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDateTool.h; sourceTree = "<group>"; };
 		C8B9B0AE20D274F9004E95D6 /* WilsonMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WilsonMarkdownView.swift; sourceTree = "<group>"; };
-		C8B9B0B020D27774004E95D6 /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = sample.md; sourceTree = "<group>"; };
 		C8D11E3620DB809600714214 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C8D11E7C20DC92AE00714214 /* SPLatex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SPLatex.html; sourceTree = "<group>"; };
 		C8DF246F20E5D47200BF0410 /* Test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 		C8B12DA51FD6459D0000DEB0 = {
 			isa = PBXGroup;
 			children = (
-				C8B9B0B020D27774004E95D6 /* sample.md */,
 				C8B12DB01FD6459D0000DEB0 /* WilsonDev */,
 				C8B12DC91FD6459D0000DEB0 /* WilsonDevTests */,
 				C8B12DD41FD6459D0000DEB0 /* WilsonDevUITests */,
@@ -473,7 +470,6 @@
 				C8B12DBB1FD6459D0000DEB0 /* Assets.xcassets in Resources */,
 				C8805851205FBF1500528322 /* girl.png in Resources */,
 				C8D11E7D20DC92AE00714214 /* SPLatex.html in Resources */,
-				C8B9B0B120D27774004E95D6 /* sample.md in Resources */,
 				C8DF247020E5D47200BF0410 /* Test.html in Resources */,
 				C880583C205FB56600528322 /* Localizable.strings in Resources */,
 				C8805843205FB72700528322 /* Wilson.strings in Resources */,
@@ -780,7 +776,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WilsonDev/WilsonDev-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -812,7 +808,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ForeverMamba.WilsonDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WilsonDev/WilsonDev-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
