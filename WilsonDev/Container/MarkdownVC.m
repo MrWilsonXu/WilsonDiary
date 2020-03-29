@@ -23,7 +23,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSString *markdownPath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"md"];
+    NSString *markdownPath = [[NSBundle mainBundle] pathForResource:@"demoMarkdown" ofType:@"md"];
     NSString *markdown = [NSString stringWithContentsOfFile:markdownPath encoding:NSUTF8StringEncoding error:nil];
     
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"Test" ofType:@"html"];

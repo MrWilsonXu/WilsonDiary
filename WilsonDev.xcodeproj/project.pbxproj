@@ -14,6 +14,14 @@
 		C80AAE16204793ED00807652 /* TransitionMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE15204793ED00807652 /* TransitionMainVC.m */; };
 		C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */ = {isa = PBXBuildFile; fileRef = C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */; };
 		C80DA9A620D3A15D00A013FB /* MarkdownVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80DA9A520D3A15D00A013FB /* MarkdownVC.m */; };
+		C827FA38242F06A40025AD6E /* WilsonDev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C827FA36242F06A40025AD6E /* WilsonDev.xcdatamodeld */; };
+		C827FA69242F1FB10025AD6E /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C827FA68242F1FB10025AD6E /* CoreDataViewController.m */; };
+		C827FA6E243052560025AD6E /* StudentCoreData+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C827FA6B243052560025AD6E /* StudentCoreData+CoreDataClass.m */; };
+		C827FA6F243052560025AD6E /* StudentCoreData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C827FA6D243052560025AD6E /* StudentCoreData+CoreDataProperties.m */; };
+		C827FA7A243055B10025AD6E /* CoreDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C827FA78243055B10025AD6E /* CoreDataCell.m */; };
+		C827FA7B243055B10025AD6E /* CoreDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C827FA79243055B10025AD6E /* CoreDataCell.xib */; };
+		C858868A242EEB43000EF2F8 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8588689242EEB43000EF2F8 /* CoreDataManager.m */; };
+		C8588699242F0347000EF2F8 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C8588698242F0347000EF2F8 /* Student.m */; };
 		C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC0392048F4B70041F894 /* TransitionCustomVC.m */; };
 		C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03C2048F4DF0041F894 /* TransitionCustonCell.m */; };
 		C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */; };
@@ -80,6 +88,21 @@
 		C80AAE1D2047FE5700807652 /* WilsonTransitonMar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WilsonTransitonMar.m; sourceTree = "<group>"; };
 		C80DA9A420D3A15D00A013FB /* MarkdownVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdownVC.h; sourceTree = "<group>"; };
 		C80DA9A520D3A15D00A013FB /* MarkdownVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkdownVC.m; sourceTree = "<group>"; };
+		C827FA37242F06A40025AD6E /* WilsonDev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WilsonDev.xcdatamodel; sourceTree = "<group>"; };
+		C827FA67242F1FB10025AD6E /* CoreDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
+		C827FA68242F1FB10025AD6E /* CoreDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
+		C827FA6A243052550025AD6E /* StudentCoreData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StudentCoreData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C827FA6B243052560025AD6E /* StudentCoreData+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StudentCoreData+CoreDataClass.m"; sourceTree = "<group>"; };
+		C827FA6C243052560025AD6E /* StudentCoreData+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StudentCoreData+CoreDataClass.h"; sourceTree = "<group>"; };
+		C827FA6D243052560025AD6E /* StudentCoreData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StudentCoreData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C827FA77243055B10025AD6E /* CoreDataCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataCell.h; sourceTree = "<group>"; };
+		C827FA78243055B10025AD6E /* CoreDataCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataCell.m; sourceTree = "<group>"; };
+		C827FA79243055B10025AD6E /* CoreDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreDataCell.xib; sourceTree = "<group>"; };
+		C8588686242EE740000EF2F8 /* demoMarkdown.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = demoMarkdown.md; sourceTree = "<group>"; };
+		C8588688242EEB43000EF2F8 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		C8588689242EEB43000EF2F8 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		C8588697242F0347000EF2F8 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		C8588698242F0347000EF2F8 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		C85EC0382048F4B70041F894 /* TransitionCustomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionCustomVC.h; sourceTree = "<group>"; };
 		C85EC0392048F4B70041F894 /* TransitionCustomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionCustomVC.m; sourceTree = "<group>"; };
 		C85EC03B2048F4DF0041F894 /* TransitionCustonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionCustonCell.h; sourceTree = "<group>"; };
@@ -194,6 +217,7 @@
 		C80883261FEB5BB80000D94C /* Container */ = {
 			isa = PBXGroup;
 			children = (
+				C827FA702430556C0025AD6E /* coreData */,
 				C882ACED204C3B65001BC673 /* WeakStrongVC.h */,
 				C882ACEE204C3B65001BC673 /* WeakStrongVC.m */,
 				C80883271FEB5BB80000D94C /* GestureVC.h */,
@@ -242,6 +266,42 @@
 				C85EC03F20494ABB0041F894 /* AppStroeMainVC.m */,
 			);
 			path = TransitionPurposeVCs;
+			sourceTree = "<group>";
+		};
+		C827FA66242F1EB20025AD6E /* coreDataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				C827FA6A243052550025AD6E /* StudentCoreData+CoreDataProperties.h */,
+				C827FA6D243052560025AD6E /* StudentCoreData+CoreDataProperties.m */,
+				C827FA6C243052560025AD6E /* StudentCoreData+CoreDataClass.h */,
+				C827FA6B243052560025AD6E /* StudentCoreData+CoreDataClass.m */,
+			);
+			path = coreDataMapping;
+			sourceTree = "<group>";
+		};
+		C827FA702430556C0025AD6E /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				C827FA67242F1FB10025AD6E /* CoreDataViewController.h */,
+				C827FA68242F1FB10025AD6E /* CoreDataViewController.m */,
+				C827FA77243055B10025AD6E /* CoreDataCell.h */,
+				C827FA78243055B10025AD6E /* CoreDataCell.m */,
+				C827FA79243055B10025AD6E /* CoreDataCell.xib */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
+		C8588687242EE7EB000EF2F8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C827FA66242F1EB20025AD6E /* coreDataMapping */,
+				C827FA36242F06A40025AD6E /* WilsonDev.xcdatamodeld */,
+				C8588688242EEB43000EF2F8 /* CoreDataManager.h */,
+				C8588689242EEB43000EF2F8 /* CoreDataManager.m */,
+				C8588697242F0347000EF2F8 /* Student.h */,
+				C8588698242F0347000EF2F8 /* Student.m */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C86490DA20B01F5B0077FDC2 /* FilePreview */ = {
@@ -308,6 +368,7 @@
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8A87635200489A700CF376D /* WilsonMainVC.h */,
 				C8A87636200489A700CF376D /* WilsonMainVC.m */,
+				C8588687242EE7EB000EF2F8 /* CoreData */,
 				C86490E420B021B80077FDC2 /* M13ProgressView */,
 				C86490DA20B01F5B0077FDC2 /* FilePreview */,
 				C8B7C2E620803F9B00FE8ACD /* WilsonCategory */,
@@ -317,6 +378,7 @@
 				C89F2251206B971E00F4A401 /* Categoty */,
 				C8B12DBA1FD6459D0000DEB0 /* Assets.xcassets */,
 				C8805853205FBF1500528322 /* girl.png */,
+				C8588686242EE740000EF2F8 /* demoMarkdown.md */,
 				C8805836205FAA0400528322 /* InfoPlist.strings */,
 				C880583E205FB56600528322 /* Localizable.strings */,
 				C8805845205FB72700528322 /* Wilson.strings */,
@@ -471,6 +533,7 @@
 				C8805851205FBF1500528322 /* girl.png in Resources */,
 				C8D11E7D20DC92AE00714214 /* SPLatex.html in Resources */,
 				C8DF247020E5D47200BF0410 /* Test.html in Resources */,
+				C827FA7B243055B10025AD6E /* CoreDataCell.xib in Resources */,
 				C880583C205FB56600528322 /* Localizable.strings in Resources */,
 				C8805843205FB72700528322 /* Wilson.strings in Resources */,
 				C8805834205FAA0400528322 /* InfoPlist.strings in Resources */,
@@ -537,26 +600,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C827FA6E243052560025AD6E /* StudentCoreData+CoreDataClass.m in Sources */,
+				C827FA38242F06A40025AD6E /* WilsonDev.xcdatamodeld in Sources */,
 				C80DA9A620D3A15D00A013FB /* MarkdownVC.m in Sources */,
 				C8A87637200489A700CF376D /* WilsonMainVC.m in Sources */,
 				C86490E120B01F6C0077FDC2 /* NGSQLPreviewVC.m in Sources */,
 				C8963E4E2079C30F00614775 /* CommonTool.m in Sources */,
 				C8B9B0AF20D274F9004E95D6 /* WilsonMarkdownView.swift in Sources */,
 				C880585A205FC07B00528322 /* LocalizableVC.m in Sources */,
+				C827FA7A243055B10025AD6E /* CoreDataCell.m in Sources */,
 				C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */,
 				C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */,
 				C882ACEF204C3B65001BC673 /* WeakStrongVC.m in Sources */,
 				C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
+				C827FA6F243052560025AD6E /* StudentCoreData+CoreDataProperties.m in Sources */,
 				C86490E020B01F6C0077FDC2 /* NGSFileDownloadView.m in Sources */,
 				C80883291FEB5BB80000D94C /* GestureVC.m in Sources */,
 				C80AAE1E2047FE5700807652 /* WilsonTransitonMar.m in Sources */,
 				C86490E920B021B80077FDC2 /* M13ProgressViewBorderedBar.m in Sources */,
 				C85EC03D2048F4DF0041F894 /* TransitionCustonCell.m in Sources */,
+				C827FA69242F1FB10025AD6E /* CoreDataViewController.m in Sources */,
 				C86490EA20B021B80077FDC2 /* M13ProgressView.m in Sources */,
 				C80AAE16204793ED00807652 /* TransitionMainVC.m in Sources */,
+				C858868A242EEB43000EF2F8 /* CoreDataManager.m in Sources */,
 				C89F2256206B975700F4A401 /* UIAlertView+Wilson.m in Sources */,
 				C85EC03A2048F4B70041F894 /* TransitionCustomVC.m in Sources */,
+				C8588699242F0347000EF2F8 /* Student.m in Sources */,
 				C8B12DB31FD6459D0000DEB0 /* AppDelegate.m in Sources */,
 				C8B7C2E920803FA100FE8ACD /* YSDateTool.m in Sources */,
 				C86490E320B01F740077FDC2 /* NGSSessionTaskManager.m in Sources */,
@@ -917,6 +987,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C827FA36242F06A40025AD6E /* WilsonDev.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C827FA37242F06A40025AD6E /* WilsonDev.xcdatamodel */,
+			);
+			currentVersion = C827FA37242F06A40025AD6E /* WilsonDev.xcdatamodel */;
+			path = WilsonDev.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C8B12DA61FD6459D0000DEB0 /* Project object */;
 }
