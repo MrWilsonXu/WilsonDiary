@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0447029024A1B1C8009B8548 /* WWDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447028F24A1B1C8009B8548 /* WWDC.swift */; };
 		5F5664DFE0A27BAEAB63E726 /* libPods-WilsonDevUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B79CC9C9B15EFE0A12973F25 /* libPods-WilsonDevUITests.a */; };
 		C80883291FEB5BB80000D94C /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80883281FEB5BB80000D94C /* GestureVC.m */; };
 		C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C808832B1FEB9EB70000D94C /* DrawRectViewVC.m */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0447028F24A1B1C8009B8548 /* WWDC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC.swift; sourceTree = "<group>"; };
 		19BAE3FEB45576C39EA43E7A /* libPods-WilsonDevTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WilsonDevTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		325F4F5D29210594C46DCB41 /* Pods-WilsonDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilsonDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WilsonDev/Pods-WilsonDev.debug.xcconfig"; sourceTree = "<group>"; };
 		A87FD9F459C72126206E8F48 /* Pods-WilsonDevUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilsonDevUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WilsonDevUITests/Pods-WilsonDevUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		C8B12DB01FD6459D0000DEB0 /* WilsonDev */ = {
 			isa = PBXGroup;
 			children = (
+				0447028F24A1B1C8009B8548 /* WWDC.swift */,
 				C8B12DB11FD6459D0000DEB0 /* AppDelegate.h */,
 				C8B12DB21FD6459D0000DEB0 /* AppDelegate.m */,
 				C8A87635200489A700CF376D /* WilsonMainVC.h */,
@@ -612,6 +615,7 @@
 				C80883301FEB9FD60000D94C /* WilsonDrawView.m in Sources */,
 				C808832C1FEB9EB70000D94C /* DrawRectViewVC.m in Sources */,
 				C882ACEF204C3B65001BC673 /* WeakStrongVC.m in Sources */,
+				0447029024A1B1C8009B8548 /* WWDC.swift in Sources */,
 				C85EC04020494ABB0041F894 /* AppStroeMainVC.m in Sources */,
 				C8B12DC11FD6459D0000DEB0 /* main.m in Sources */,
 				C827FA6F243052560025AD6E /* StudentCoreData+CoreDataProperties.m in Sources */,
