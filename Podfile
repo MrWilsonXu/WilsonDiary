@@ -14,6 +14,7 @@ target 'WilsonDev' do
   pod 'Masonry', '~> 1.1.0'
   pod 'AFNetworking', '~> 3.1.0'
   pod 'Realm', '~> 3.1.0'
+  pod 'ReactiveCocoa', '~> 2.4.7'
 
   target 'WilsonDevUITests' do
     inherit! :search_paths

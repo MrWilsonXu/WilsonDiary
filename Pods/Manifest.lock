@@ -16,6 +16,13 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
   - MMMarkdown (0.5.5)
+  - ReactiveCocoa (2.4.7):
+    - ReactiveCocoa/UI (= 2.4.7)
+  - ReactiveCocoa/Core (2.4.7):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.7)
+  - ReactiveCocoa/UI (2.4.7):
+    - ReactiveCocoa/Core
   - Realm (3.1.0):
     - Realm/Headers (= 3.1.0)
   - Realm/Headers (3.1.0)
@@ -25,24 +32,28 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - Masonry (~> 1.1.0)
   - MMMarkdown (~> 0.5.5)
+  - ReactiveCocoa (~> 2.4.7)
   - Realm (~> 3.1.0)
   - SDAutoLayout (~> 2.2.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Masonry
     - MMMarkdown
     - Realm
     - SDAutoLayout
+  trunk:
+    - ReactiveCocoa
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   Realm: 09513d7c054678d65cd02ce09871f805b0d758ac
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
 
-PODFILE CHECKSUM: 8543437978bef8c547ac6d600ae9a5781ab28f45
+PODFILE CHECKSUM: eb171b809f9fa4fe0bbcb2e4a5092bfe5ba7b6d8
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1
