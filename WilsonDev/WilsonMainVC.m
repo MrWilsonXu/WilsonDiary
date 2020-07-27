@@ -15,6 +15,7 @@
 #import "NGSQLPreviewVC.h"
 #import "MarkdownVC.h"
 #import "CoreDataViewController.h"
+#import "RACViewController.h"
 
 #import "SDAutolayout.h"
 
@@ -83,6 +84,7 @@
     NSString *vc6 = NSStringFromClass([NGSQLPreviewVC class]);
     NSString *vc7 = NSStringFromClass([MarkdownVC class]);
     NSString *vc8 = NSStringFromClass([CoreDataViewController class]);
+    NSString *vc9 = NSStringFromClass([RACViewController class]);
     
     WilsonModel *gesture = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:NSLocalizedString(@"GestureHandle", nil) vc:vc1];
     WilsonModel *drawView = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"画图" vc:vc2];
@@ -92,6 +94,7 @@
     WilsonModel *preview = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"文件预览" vc:vc6];
     WilsonModel *markdown = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"Markdown" vc:vc7];
     WilsonModel *coreData = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"coreData" vc:vc8];
+    WilsonModel *RAC = [self wilsonModelWithSEL:@selector(pushToVCWithSting:) title:@"RAC" vc:vc9];
     
     [self.dataSource addObject:gesture];
     [self.dataSource addObject:drawView];
@@ -101,6 +104,7 @@
     [self.dataSource addObject:preview];
     [self.dataSource addObject:markdown];
     [self.dataSource addObject:coreData];
+    [self.dataSource addObject:RAC];
     
     [self.tableView reloadData];
     
